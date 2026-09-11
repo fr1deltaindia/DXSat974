@@ -47,3 +47,8 @@ Version 8 :
 - niveau de difficulté
 - date de dernière vérification
 - procédure de réglage en 4 étapes
+
+Version 9 :
+- intégration de Cloudflare Web Analytics
+- suivi des visites et statistiques agrégées
+- possibilité de consulter les pays d'origine dans le tableau de bord Cloudflare

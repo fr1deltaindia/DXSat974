@@ -1,125 +1,153 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DXSat 974</title><link rel="stylesheet" href="styles.css"></head><body>
-<header><div class="wrap">
-        <div class="lang-switch" id="langSwitch">
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DXSat 974 — rapports de réception satellite Ku et C-band pour l'Afrique et l'océan Indien.">
+  <title>DXSat 974 — Afrique & Océan Indien</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="topbar">
+        <div>
+          <p class="eyebrow" data-i18n="heroEyebrow">Réception satellite DX — Afrique & Océan Indien</p>
+          <h1>DXSat 974</h1>
+        </div>
+        <div class="lang-switch">
           <button class="lang-btn active" data-lang="fr">FR</button>
           <button class="lang-btn" data-lang="en">EN</button>
-        </div><p class="eyebrow">Réception satellite DX depuis La Réunion</p><h1>DXSat 974</h1><p>Journal d’essais Ku et C-band : satellites, fréquences, paraboles, LNB, niveaux et chaînes reçues.</p></div></header>
-<nav><div class="wrap"><a href="#actus">Actualités</a><a href="#essais">Essais</a><a href="#satellites">Satellites</a><a href="#materiel">Matériel</a><a href="#prochains">Prochains essais</a></div></nav>
-<main class="wrap">
-<section class="stats"><div><b id="nTests"></b><span> essais</span></div><div><b id="nSats"></b><span> satellites</span></div><div><b id="nOk"></b><span> réussites</span></div></section>
-<section id="actus"><div class="section-head"><div><p class="eyebrow">Veille orbitale & chaînes</p><h2>Actualités & mouvements satellites</h2><p class="intro">Suivi des mouvements orbitaux, nouvelles chaînes FTA, changements de transpondeurs, arrêts et porteuses de test concernant les satellites explorés depuis La Réunion.</p></div><div class="news-filters"><select id="newsType"><option value="">Tous les types</option><option>Mouvement orbital</option><option>Nouvelle chaîne</option><option>Transpondeur</option><option>Test</option><option>Arrêt</option></select><select id="newsSat"><option value="">Tous les satellites</option></select></div></div><div id="newsFeed" class="news-feed"></div><div class="news-note">Les informations externes sont datées et sourcées. Les observations marquées « DXSat 974 » correspondent aux essais réalisés depuis La Réunion.</div></section>
-<section id="essais"><h2>Journal des essais</h2><div class="filters"><input id="q" placeholder="Rechercher…"><select id="band"><option value="">Toutes bandes</option><option>Ku</option><option>C</option></select><select id="res"><option value="">Tous résultats</option><option>Réussi</option><option>Partiel</option><option>Échec</option></select></div>
-<div class="table"><table><thead><tr><th>Date</th><th>Satellite</th><th>Pos.</th><th>Bande</th><th>Fréquence</th><th>SR</th><th>Service</th><th>Parabole</th><th>Mesure</th><th>Résultat</th></tr></thead><tbody id="body"></tbody></table></div></section>
-<section id="satellites"><h2>Satellites suivis</h2><div id="cards" class="cards"></div></section>
-<section id="materiel"><h2>Matériel</h2><div class="cards"><article><h3>Récepteurs</h3><p>Octagon SF8008 V3 4K Supreme Twin, GTMedia V8 Finder, Freesat V7 Combo, Satlink WS6908.</p></article><article><h3>Paraboles</h3><p>Offset 85 cm, 1,20–1,30 m, futurs essais C-band avec diamètre supérieur envisagé.</p></article><article><h3>LNB</h3><p>Premium X, Inverto 60 dB &lt;0,2 dB, Bullseye 10 kHz, projet LNBF C-band.</p></article></div></section>
-<section id="prochains"><h2>Prochains essais</h2><div class="cards"><article><h3>Eutelsat 3B – 3°E</h3><p>Tester le faisceau C-band Global avec LNBF C-band adapté à une parabole offset.</p></article><article><h3>Eutelsat 7C – 7°E</h3><p>Identifier les transpondeurs Africa réellement exploitables à La Réunion.</p></article><article><h3>16°E</h3><p>Suivre 16A et tout éventuel repositionnement ou test lié à Eutelsat 7B.</p></article></div></section>
-</main><footer><div class="wrap">DXSat 974 — carnet indépendant de réception satellite à La Réunion.</div></footer>
-<script src="data.js"></script>
-<script>
-const I18N = {
-  fr: {
-    pageTitle: "DXSat 974 — Réception satellite à La Réunion",
-    heroEyebrow: "Réception satellite DX depuis La Réunion",
-    heroTitle: "DXSat 974",
-    heroLead: "Journal public d’essais en bande Ku et C : satellites, fréquences, paraboles, LNB, niveaux de signal, chaînes reçues et tests à venir.",
-    navTests: "Essais",
-    navSats: "Satellites",
-    navGear: "Matériel",
-    navNews: "Actualités & mouvements satellites",
-    navNext: "Prochains essais",
-    testsTitle: "Journal des essais",
-    newsTitle: "Actualités & mouvements satellites",
-    gearTitle: "Matériel",
-    nextTitle: "Prochains essais",
-    searchPh: "Satellite, chaîne, fréquence…",
-    allBands: "Toutes bandes",
-    allResults: "Tous résultats",
-    allSats: "Tous satellites",
-    allNews: "Tous types",
-    resultSuccess: "Réussi",
-    resultPartial: "Partiel",
-    resultFail: "Échec",
-    newsMovement: "Mouvement orbital",
-    newsChannel: "Nouvelle chaîne",
-    newsFreq: "Changement de fréquence",
-    newsStop: "Arrêt",
-    newsTest: "Test",
-    source: "Source",
-    footer: "DXSat 974 — Carnet d’essais indépendant de réception satellite à La Réunion."
-  },
-  en: {
-    pageTitle: "DXSat 974 — Satellite reception from Reunion Island",
-    heroEyebrow: "Satellite DX reception from Reunion Island",
-    heroTitle: "DXSat 974",
-    heroLead: "Public Ku-band and C-band test log: satellites, frequencies, dishes, LNBs, signal levels, received channels and future tests.",
-    navTests: "Tests",
-    navSats: "Satellites",
-    navGear: "Equipment",
-    navNews: "Satellite news & movements",
-    navNext: "Upcoming tests",
-    testsTitle: "Test log",
-    newsTitle: "Satellite news & movements",
-    gearTitle: "Equipment",
-    nextTitle: "Upcoming tests",
-    searchPh: "Satellite, channel, frequency…",
-    allBands: "All bands",
-    allResults: "All results",
-    allSats: "All satellites",
-    allNews: "All types",
-    resultSuccess: "Success",
-    resultPartial: "Partial",
-    resultFail: "Failed",
-    newsMovement: "Orbital movement",
-    newsChannel: "New channel",
-    newsFreq: "Frequency change",
-    newsStop: "Service stop",
-    newsTest: "Test",
-    source: "Source",
-    footer: "DXSat 974 — Independent satellite reception test log from Reunion Island."
-  }
-};
+        </div>
+      </div>
+      <p class="lead" data-i18n="heroLead">Base de réception satellite Ku et C-band couvrant l’Afrique, Madagascar et l’océan Indien, avec La Réunion comme station de référence.</p>
+      <div class="badges">
+        <span>🌍 Afrique & Océan Indien</span>
+        <span>📡 Ku / C-band</span>
+        <span>📺 FTA & DX</span>
+        <span>📍 Station de référence : La Réunion</span>
+      </div>
+    </div>
+  </header>
 
-const STATIC_TRANSLATIONS = [
-  ["Réception satellite DX depuis La Réunion","Satellite DX reception from Reunion Island"],
-  ["Journal public d’essais en bande Ku et C : satellites, fréquences, paraboles, LNB, niveaux de signal, chaînes reçues et tests à venir.","Public Ku-band and C-band test log: satellites, frequencies, dishes, LNBs, signal levels, received channels and future tests."],
-  ["Essais","Tests"],["Satellites","Satellites"],["Matériel","Equipment"],
-  ["Actualités & mouvements satellites","Satellite news & movements"],
-  ["Prochains essais","Upcoming tests"],["Journal des essais","Test log"],
-  ["Rechercher…","Search…"],["Toutes bandes","All bands"],["Tous résultats","All results"],
-  ["Réussi","Success"],["Partiel","Partial"],["Échec","Failed"],
-  ["Récepteurs","Receivers"],["Paraboles","Dishes"],["LNB & accessoires","LNBs & accessories"],
-  ["Prochains essais","Upcoming tests"],
-  ["Tester le faisceau C-band Global avec LNBF C-band adapté à une parabole offset.","Test the Global C-band beam with a C-band LNBF adapted to an offset dish."],
-  ["Identifier les transpondeurs Africa réellement exploitables à La Réunion.","Identify Africa-beam transponders that are actually usable from Reunion Island."],
-  ["Suivre 16A et tout éventuel repositionnement ou test lié à Eutelsat 7B.","Track Eutelsat 16A and any possible repositioning or tests involving Eutelsat 7B."],
-  ["Carnet d’essais indépendant de réception satellite à La Réunion.","Independent satellite reception test log from Reunion Island."]
-];
+  <nav class="nav">
+    <div class="wrap navlinks">
+      <a href="#actus" data-i18n="navNews">Actualités</a>
+      <a href="#essais" data-i18n="navTests">Réceptions DX</a>
+      <a href="#satellites" data-i18n="navSats">Satellites</a>
+      <a href="#faisceaux" data-i18n="navBeams">Faisceaux</a>
+      <a href="#fta" data-i18n="navFta">Chaînes FTA</a>
+      <a href="#materiel" data-i18n="navGear">Matériel</a>
+      <a href="#contribuer" data-i18n="navContrib">Contribuer</a>
+    </div>
+  </nav>
 
-function translateStatic(lang){
-  document.documentElement.lang = lang;
-  document.title = I18N[lang].pageTitle;
-  document.querySelectorAll("body *").forEach(el => {
-    if (el.children.length === 0 && el.textContent.trim()) {
-      const original = el.dataset.fr || el.textContent.trim();
-      if (!el.dataset.fr) el.dataset.fr = original;
-      if (lang === "fr") {
-        el.textContent = el.dataset.fr;
-      } else {
-        const found = STATIC_TRANSLATIONS.find(([fr]) => fr === el.dataset.fr);
-        if (found) el.textContent = found[1];
-      }
-    }
-  });
-  const search = document.querySelector('#search, #q');
-  if (search) search.placeholder = lang === "fr" ? "Rechercher…" : "Search…";
-  localStorage.setItem("dxsat974_lang", lang);
-  document.querySelectorAll(".lang-btn").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
-  window.dispatchEvent(new CustomEvent("dxsat-lang-change",{detail:{lang}}));
-}
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".lang-btn").forEach(btn => btn.addEventListener("click",()=>translateStatic(btn.dataset.lang)));
-  translateStatic(localStorage.getItem("dxsat974_lang") || "fr");
-});
-</script>
+  <main class="wrap">
+    <section class="stats">
+      <article><strong id="statTests">0</strong><span data-i18n="statTests">rapports de réception</span></article>
+      <article><strong id="statSats">0</strong><span data-i18n="statSats">satellites suivis</span></article>
+      <article><strong id="statPlaces">0</strong><span data-i18n="statPlaces">zones de réception</span></article>
+      <article><strong id="statFta">0</strong><span data-i18n="statFta">services FTA recensés</span></article>
+    </section>
 
-<script src="app.js"></script></body></html>
+    <section id="actus">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-i18n="newsEyebrow">Veille orbitale & services</p>
+          <h2 data-i18n="newsTitle">Actualités & mouvements satellites</h2>
+        </div>
+      </div>
+      <div id="newsCards" class="news-grid"></div>
+    </section>
+
+    <section id="essais">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-i18n="testsEyebrow">Rapports terrain</p>
+          <h2 data-i18n="testsTitle">Réceptions DX</h2>
+        </div>
+        <div class="filters">
+          <input id="search" type="search" placeholder="Satellite, chaîne, lieu…">
+          <select id="bandFilter">
+            <option value="">Toutes bandes</option>
+            <option value="Ku">Ku</option>
+            <option value="C">C</option>
+          </select>
+          <select id="resultFilter">
+            <option value="">Tous statuts</option>
+            <option value="Stable">Stable</option>
+            <option value="Limite">Limite</option>
+            <option value="Détecté">Détecté</option>
+            <option value="Non reçu">Non reçu</option>
+            <option value="À tester">À tester</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="thDate">Date</th>
+              <th data-i18n="thSat">Satellite</th>
+              <th data-i18n="thPos">Pos.</th>
+              <th data-i18n="thBeam">Faisceau</th>
+              <th data-i18n="thPlace">Lieu</th>
+              <th data-i18n="thBand">Bande</th>
+              <th data-i18n="thFreq">Fréquence</th>
+              <th>SR</th>
+              <th data-i18n="thService">Chaîne / service</th>
+              <th data-i18n="thDish">Parabole</th>
+              <th data-i18n="thMeasure">Mesure</th>
+              <th data-i18n="thStatus">Statut</th>
+            </tr>
+          </thead>
+          <tbody id="testsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="satellites">
+      <p class="eyebrow" data-i18n="satsEyebrow">Positions orbitales suivies</p>
+      <h2 data-i18n="satsTitle">Satellites</h2>
+      <div id="satCards" class="grid"></div>
+    </section>
+
+    <section id="faisceaux">
+      <p class="eyebrow" data-i18n="beamsEyebrow">Couvertures</p>
+      <h2 data-i18n="beamsTitle">Faisceaux suivis</h2>
+      <div id="beamCards" class="grid three"></div>
+    </section>
+
+    <section id="fta">
+      <p class="eyebrow" data-i18n="ftaEyebrow">Télévision en clair</p>
+      <h2 data-i18n="ftaTitle">Chaînes FTA observées</h2>
+      <div id="ftaCards" class="grid three"></div>
+    </section>
+
+    <section id="materiel">
+      <p class="eyebrow" data-i18n="gearEyebrow">Station de référence</p>
+      <h2 data-i18n="gearTitle">Matériel utilisé à La Réunion</h2>
+      <div class="grid three">
+        <article class="card"><h3 data-i18n="receivers">Récepteurs</h3><p>Octagon SF8008 V3 4K Supreme Twin, GTMedia V8 Finder, Freesat V7 Combo, Satlink WS6908.</p></article>
+        <article class="card"><h3 data-i18n="dishes">Paraboles</h3><p data-i18n="dishText">Offset 85 cm, 1,20–1,30 m, avec essais de plus grand diamètre envisagés pour le C-band.</p></article>
+        <article class="card"><h3>LNB</h3><p data-i18n="lnbText">Premium X, Inverto 60 dB &lt;0,2 dB, Bullseye 10 kHz et projet LNBF C-band.</p></article>
+      </div>
+    </section>
+
+    <section id="contribuer">
+      <p class="eyebrow" data-i18n="contribEyebrow">Communauté</p>
+      <h2 data-i18n="contribTitle">Contribuer à la base</h2>
+      <div class="card">
+        <p data-i18n="contribText">Les rapports provenant de Madagascar, Maurice, Mayotte, Seychelles, Afrique australe, Afrique de l’Est et autres zones couvertes sont les bienvenus. Pour chaque réception : lieu, satellite, fréquence, polarisation, SR, bande, faisceau supposé, diamètre de parabole, LNB, SNR/qualité, météo et résultat.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap" data-i18n="footer">DXSat 974 — Base indépendante de réception satellite pour l’Afrique et l’océan Indien.</div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

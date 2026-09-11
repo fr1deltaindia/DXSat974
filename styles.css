@@ -111,3 +111,13 @@ code{background:#081522;border:1px solid #1b3851;border-radius:6px;padding:2px 5
 .gear-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 .station-note{margin-top:18px}
 @media(max-width:800px){.gear-card{grid-template-columns:1fr}.gear-specs{grid-template-columns:1fr}}
+
+.broadcaster-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+.broadcaster-card{background:linear-gradient(180deg,#102741,#0a1727);border:1px solid var(--line);border-radius:18px;padding:20px}
+.broadcaster-country{font-size:.82rem;color:var(--accent2);font-weight:800;margin-bottom:7px}
+.broadcaster-card h3{margin:.2rem 0 .65rem;font-size:1.3rem}
+.broadcaster-card p{color:var(--muted);line-height:1.55}
+.broadcaster-card a,.broadcaster-note a,.broadcaster-intro a{color:#8fe5ff}
+.broadcaster-intro{margin-bottom:4px}
+.broadcaster-note{margin-top:18px}
+@media(max-width:800px){.broadcaster-grid{grid-template-columns:1fr}}

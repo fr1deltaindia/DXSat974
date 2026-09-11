@@ -91,3 +91,10 @@ Version 14 :
 - lien Download Center / notice
 - lien de recherche AliExpress
 - champs contributeur pour référence du mesureur et photos de station
+
+Version 15 :
+- rubrique Diffuseurs / Broadcasters
+- liste initiale des chaînes réellement reçues à contacter
+- contacts publics vérifiés pour QTV Gambia, SenTV/DMedia, Canal 2 International et 3Ktv
+- bouton email direct par chaîne
+- appel aux diffuseurs pour fournir paramètres officiels, cartes et changements de fréquence

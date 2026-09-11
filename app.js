@@ -83,7 +83,10 @@ function renderCards(){
  </article>`).join("");
  document.getElementById("beamCards").innerHTML=BEAMS.map(b=>`<article class="beam-card"><h3>${b.name}</h3><p><strong>${b.sat}</strong></p><p>${b.zone}</p><p>${b.note}</p></article>`).join("");
  document.getElementById("ftaCards").innerHTML=FTA.map(f=>`<article class="fta-card"><h3>${f.name}</h3><p>${f.sat}</p><p><strong>${f.freq}</strong></p><p>${f.place} — <span class="status ${statusClass(f.status)}">${f.status}</span></p></article>`).join("");
- document.getElementById("newsCards").innerHTML=NEWS.map(n=>`<article class="news-card"><div class="news-date">${n.date}</div><div class="news-type">${n.type}</div><h3>${n.title}</h3><p>${n.text}</p></article>`).join("");
+ document.getElementById("newsCards").innerHTML=NEWS.map(n=>`<article class="news-card">
+<div class="news-date">${n.date}</div><div class="news-type">${n.type}</div><h3>${n.title}</h3><p>${n.text}</p>
+${n.source?`<a class="btn" href="${n.source}" target="_blank" rel="noopener">Source ↗</a>`:""}
+</article>`).join("");
 }
 function applyLang(lang){
  document.documentElement.lang=lang;

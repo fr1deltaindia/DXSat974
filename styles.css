@@ -31,3 +31,14 @@ main section{padding:50px 0;border-bottom:1px solid rgba(255,255,255,.06)}.stats
 .btn:hover{background:#102b45}.btn.primary{background:#0f5e86;border-color:#247fac}
 .btn.primary:hover{background:#14739f}
 @media(max-width:900px){.sat-profile-grid{grid-template-columns:1fr}.sat-meta{grid-template-columns:1fr 1fr}}
+
+.orbit-alert{padding:18px 0 0;background:transparent;border:0}
+.orbit-alert .wrap{display:flex;gap:18px;align-items:flex-start;background:linear-gradient(135deg,#3b1d12,#182335);border:1px solid #a85a2d;border-radius:18px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.22)}
+.alert-icon{font-size:2rem;line-height:1}
+.alert-kicker{font-size:.78rem;letter-spacing:.12em;font-weight:900;color:#ffb36c}
+.orbit-alert h2{margin:.2rem 0 .5rem;font-size:1.45rem}
+.orbit-alert p{margin:.2rem 0;color:#e8edf3;line-height:1.6}
+.alert-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.alert-meta span{background:#251c18;border:1px solid #6b4632;border-radius:999px;padding:6px 9px;font-size:.78rem;color:#ffd8bd}
+.alert-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+@media(max-width:700px){.orbit-alert .wrap{flex-direction:column}}

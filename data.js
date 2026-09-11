@@ -18,7 +18,7 @@ const SATELLITES = [
    bands:["Ku","Ka"],
    beams:["Ku Africa","Ku South-East Africa / Indian Ocean","Ku Europe A/B"],
    zones:["Afrique subsaharienne","Madagascar","La Réunion","Mayotte","Océan Indien","Europe"],
-   dx:"Très important pour DXSat 974 : plusieurs transpondeurs africains et de l’océan Indien ont été reçus à La Réunion.",
+   dx:"Très important pour DXSat 974. Plusieurs transpondeurs africains et de l’océan Indien ont été reçus à La Réunion. Migration de services vers Eutelsat 16D annoncée pour le 15 septembre 2026.",
    officialMap:"https://www.eutelsat.com/satellite-network/GEO-fleet/eutelsat-16-east",
    officialPdf:"https://www.eutelsat.com/sites/default/files/satellite_imported_documents/EUTELSAT_SATELLITE_E16A.pdf"
  },
@@ -87,9 +87,9 @@ const FTA = [
 ];
 
 const NEWS = [
- {date:"2026-09-11",type:"Veille",title:"Position 16°E sous surveillance",text:"Suivi des éventuels changements de services, fréquences et mouvements orbitaux autour d’Eutelsat 16A / 7B."},
- {date:"2026-09-11",type:"Projet C-band",title:"Eutelsat 3B ajouté aux essais",text:"Préparation d’essais du faisceau C-band Global avec LNBF C-band et parabole adaptée."},
- {date:"2026-09-11",type:"Élargissement",title:"DXSat 974 devient Afrique & Océan Indien",text:"La base est désormais conçue pour accueillir des rapports provenant de toute la zone couverte par les faisceaux suivis."}
+ {date:"2026-09-11",type:"Migration programmée",title:"Eutelsat 16A → Eutelsat 16D le 15 septembre",text:"Eurovision Services annonce un transfert des services vers Eutelsat 16D à 16°E le 15 septembre 2026, avec extinction des transpondeurs 16A et activation sur 16D autour de 02:10 UTC.",source:"https://www.eurovisionservices.com/insights/technical/transfer-of-services-from-eutelsat-16a-to-eutelsat-16d"},
+ {date:"2026-09-01",type:"Transfert de services",title:"Eutelsat 7B quitte 7°E",text:"Les services commerciaux d’Eutelsat 7B ont été transférés vers Eutelsat 7C. Plusieurs sources spécialisées évoquent alors un repositionnement de 7B vers 16°E.",source:"https://satkurier.pl/news/252588/eutelsat-7b-schodzi-z-7e-mozliwa-relokacja-na-16e.html"},
+ {date:"2026-09-11",type:"À surveiller",title:"Réception à La Réunion après migration",text:"À partir du 15 septembre, comparer les niveaux, faisceaux et paramètres des transpondeurs reçus depuis La Réunion, notamment les services africains et TV Malagasy.",source:""}
 ];
 
 

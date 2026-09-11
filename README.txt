@@ -30,3 +30,10 @@ Version 6 :
 - bouton vers la carte de couverture officielle de l'opérateur
 - bouton brochure/PDF officiel quand disponible
 - Eutelsat 36°E mis à jour en 36C / 36D
+
+Version 7 :
+- bandeau d'alerte orbitale en haut du site
+- information datée sur le transfert des services 7B -> 7C
+- information sur la migration 16A -> 16D annoncée pour le 15/09/2026
+- lien direct vers la source technique Eurovision Services
+- champ "dernière vérification"

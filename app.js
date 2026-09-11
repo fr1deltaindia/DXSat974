@@ -1,7 +1,7 @@
 
 const I18N={
 fr:{
-heroEyebrow:"Réception satellite DX — Afrique & Océan Indien",
+heroEyebrow:"Réception satellite DX — Afrique & Océan Indien",siteTagline:"Guide pratique de réception satellite et VHF DX pour l’Afrique et l’océan Indien",siteSubtagline:"Essais réels, réglages rapides, fréquences, faisceaux, cartes officielles et rapports de propagation.",
 heroLead:"Base de réception satellite Ku et C-band couvrant l’Afrique, Madagascar et l’océan Indien, avec La Réunion comme station de référence.",
 navNews:"Actualités",navTests:"Réceptions DX",navSats:"Satellites",navBeams:"Faisceaux",navFta:"Chaînes FTA",navVhf:"VHF DX",navGear:"Matériel",navContrib:"Contribuer",
 statTests:"rapports de réception",statSats:"satellites suivis",statPlaces:"zones de réception",statFta:"services FTA recensés",
@@ -17,7 +17,7 @@ footer:"DXSat 974 — Base indépendante de réception satellite pour l’Afriqu
 thDate:"Date",thSat:"Satellite",thPos:"Pos.",thBeam:"Faisceau",thPlace:"Lieu",thBand:"Bande",thFreq:"Fréquence",thService:"Chaîne / service",thDish:"Parabole",thMeasure:"Mesure",thStatus:"Statut"
 },
 en:{
-heroEyebrow:"Satellite DX reception — Africa & Indian Ocean",
+heroEyebrow:"Satellite DX reception — Africa & Indian Ocean",siteTagline:"Practical Satellite Reception & VHF DX Guide for Africa and the Indian Ocean",siteSubtagline:"Real-world tests, quick pointing data, frequencies, beams, official coverage maps and propagation reports.",
 heroLead:"Ku-band and C-band satellite reception database covering Africa, Madagascar and the Indian Ocean, with Reunion Island as the reference station.",
 navNews:"News",navTests:"DX reports",navSats:"Satellites",navBeams:"Beams",navFta:"FTA channels",navVhf:"VHF DX",navGear:"Equipment",navContrib:"Contribute",
 statTests:"reception reports",statSats:"satellites tracked",statPlaces:"reception areas",statFta:"FTA services listed",

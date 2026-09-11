@@ -67,3 +67,9 @@ Version 11 :
 - hiérarchie visuelle renforcée
 - légende claire des statuts : Testé / Officiel / À surveiller / À tester
 - accès direct vers réglage rapide, essais DX et actualités satellites
+
+Version 12 :
+- nouvelle signature officielle sous le titre DXSat 974
+- titre SEO mis à jour
+- description SEO mise à jour
+- version anglaise intégrée

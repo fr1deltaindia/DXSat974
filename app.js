@@ -1,0 +1,5 @@
+const body=document.getElementById('body'),q=document.getElementById('q'),band=document.getElementById('band'),res=document.getElementById('res');
+function render(){let t=q.value.toLowerCase();let rows=TESTS.filter(x=>(!t||Object.values(x).join(' ').toLowerCase().includes(t))&&(!band.value||x.band===band.value)&&(!res.value||x.result===res.value));body.innerHTML=rows.map(x=>`<tr><td>${x.date}</td><td>${x.sat}</td><td>${x.pos}</td><td>${x.band}</td><td>${x.freq}</td><td>${x.sr}</td><td>${x.service}</td><td>${x.dish}</td><td>${x.measure}</td><td class="${x.result==='Réussi'?'ok':x.result==='Échec'?'bad':'part'}">${x.result}</td></tr>`).join('')}
+[q,band,res].forEach(e=>e.addEventListener('input',render));
+document.getElementById('cards').innerHTML=SATS.map(s=>`<article><div class="pos">${s[1]}</div><h3>${s[0]}</h3><p>${s[2]}</p></article>`).join('');
+document.getElementById('nTests').textContent=TESTS.length;document.getElementById('nSats').textContent=new Set(TESTS.map(x=>x.sat)).size;document.getElementById('nOk').textContent=TESTS.filter(x=>x.result==='Réussi').length;render();

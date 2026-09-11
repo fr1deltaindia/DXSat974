@@ -69,3 +69,27 @@ main section{padding:50px 0;border-bottom:1px solid rgba(255,255,255,.06)}.stats
 code{background:#081522;border:1px solid #1b3851;border-radius:6px;padding:2px 5px;color:#bfeaff}
 @media(max-width:900px){.contrib-layout,.workflow{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.contrib-layout,.workflow{grid-template-columns:1fr}}
+
+.home-dashboard{padding:34px 0 8px;background:transparent}
+.home-intro{max-width:900px;margin-bottom:18px}
+.home-intro h2{margin:.2rem 0 .45rem;font-size:2.1rem}
+.home-intro p{color:var(--muted);line-height:1.65}
+.home-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.home-action{display:flex;flex-direction:column;gap:8px;text-decoration:none;background:linear-gradient(180deg,#10233a,#0a1727);border:1px solid var(--line);border-radius:18px;padding:22px;color:var(--text);min-height:180px;transition:transform .15s ease,border-color .15s ease,background .15s ease}
+.home-action:hover{transform:translateY(-2px);border-color:#2e658f;background:#102944}
+.home-action.primary{border-color:#2b82ad;background:linear-gradient(180deg,#123656,#0b2135)}
+.home-icon{font-size:2rem}
+.home-action strong{font-size:1.12rem}
+.home-action small{color:var(--muted);line-height:1.55;font-size:.92rem}
+.trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.trust-strip>div{background:#091624;border:1px solid #17304a;border-radius:12px;padding:10px 12px;display:grid;grid-template-columns:auto 1fr;column-gap:8px;align-items:center}
+.trust-strip small{grid-column:2;color:var(--muted);font-size:.76rem}
+.trust-dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.trust-dot.tested,.cred.tested{background:#1d6f42;color:#d9ffe6}
+.trust-dot.official,.cred.official{background:#155c85;color:#ddf5ff}
+.trust-dot.watch,.cred.watch{background:#8a5b11;color:#fff0c7}
+.trust-dot.planned,.cred.planned{background:#555f70;color:#eef3f9}
+.credibility-note{width:min(1220px,92%);margin:24px auto 0;background:#0b1a2a;border:1px solid #1c3a55;border-radius:14px;padding:12px 14px;color:#d8e6f3;line-height:1.7}
+.cred{display:inline-block;border-radius:999px;padding:3px 8px;margin:0 2px;font-size:.76rem;font-weight:800}
+@media(max-width:900px){.home-actions{grid-template-columns:1fr}.trust-strip{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.trust-strip{grid-template-columns:1fr}}

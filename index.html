@@ -32,6 +32,7 @@
 
   <nav class="nav">
     <div class="wrap navlinks">
+      <a href="#accueil">Accueil</a>
       <a href="#pointage-rapide">Réglage rapide</a>
       <a href="#actus" data-i18n="navNews">Actualités</a>
       <a href="#essais" data-i18n="navTests">Réceptions DX</a>
@@ -43,6 +44,47 @@
       <a href="#contribuer" data-i18n="navContrib">Contribuer</a>
     </div>
   </nav>
+
+<section class="home-dashboard" id="accueil">
+  <div class="wrap">
+    <div class="home-intro">
+      <p class="eyebrow">DXSat 974 — accès rapide</p>
+      <h2>Que voulez-vous faire ?</h2>
+      <p>
+        Le site est organisé pour aller directement à l’essentiel : pointer une parabole, consulter des essais réels
+        ou vérifier les dernières évolutions satellites.
+      </p>
+    </div>
+
+    <div class="home-actions">
+      <a class="home-action primary" href="#pointage-rapide">
+        <span class="home-icon">📡</span>
+        <strong>Je veux pointer un satellite</strong>
+        <small>Fréquence de pointage, faisceau, taille de parabole, LNB et difficulté.</small>
+      </a>
+
+      <a class="home-action" href="#essais">
+        <span class="home-icon">📊</span>
+        <strong>Voir les essais DX</strong>
+        <small>Rapports réels de réception satellite et mesures effectuées sur le terrain.</small>
+      </a>
+
+      <a class="home-action" href="#actus">
+        <span class="home-icon">🛰️</span>
+        <strong>Voir les actualités satellites</strong>
+        <small>Mouvements orbitaux, migrations, chaînes FTA et changements de transpondeurs.</small>
+      </a>
+    </div>
+
+    <div class="trust-strip">
+      <div><span class="trust-dot tested"></span><strong>Testé</strong><small>mesuré sur le terrain</small></div>
+      <div><span class="trust-dot official"></span><strong>Officiel</strong><small>source opérateur</small></div>
+      <div><span class="trust-dot watch"></span><strong>À surveiller</strong><small>information en évolution</small></div>
+      <div><span class="trust-dot planned"></span><strong>À tester</strong><small>essai prévu</small></div>
+    </div>
+  </div>
+</section>
+
 
 <section class="orbit-alert">
   <div class="wrap">
@@ -78,6 +120,15 @@
     </section>
 
     
+
+<div class="credibility-note">
+  <strong>Comment lire les informations :</strong>
+  <span class="cred tested">Testé</span> = mesure réalisée,
+  <span class="cred official">Officiel</span> = donnée opérateur,
+  <span class="cred watch">À surveiller</span> = évolution en cours,
+  <span class="cred planned">À tester</span> = essai prévu.
+</div>
+
 <section id="pointage-rapide">
   <div class="section-head">
     <div>
@@ -130,7 +181,7 @@
       <div class="section-head">
         <div>
           <p class="eyebrow" data-i18n="testsEyebrow">Rapports terrain</p>
-          <h2 data-i18n="testsTitle">Réceptions DX</h2>
+          <h2 data-i18n="testsTitle">Essais et réceptions DX</h2>
         </div>
         <div class="filters">
           <input id="search" type="search" placeholder="Satellite, chaîne, lieu…">
@@ -177,7 +228,7 @@
   <div class="section-head">
     <div>
       <p class="eyebrow" data-i18n="satsEyebrow">Positions orbitales suivies</p>
-      <h2 data-i18n="satsTitle">Fiches satellites</h2>
+      <h2 data-i18n="satsTitle">Fiches pratiques des satellites</h2>
     </div>
   </div>
   <p class="section-intro" data-i18n="satIntro">

@@ -61,3 +61,9 @@ Version 10 :
 - variable CONTRIBUTION_EMAIL dans app.js à renseigner avec l'adresse de réception
 
 Adresse de contribution configurée : fr1deltaindia@gmail.com
+
+Version 11 :
+- accueil réorganisé autour de 3 actions principales
+- hiérarchie visuelle renforcée
+- légende claire des statuts : Testé / Officiel / À surveiller / À tester
+- accès direct vers réglage rapide, essais DX et actualités satellites

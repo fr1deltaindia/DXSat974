@@ -132,3 +132,18 @@ Version 19 :
 - panneau détaillé : fréquence, service, parabole, matériel, mesure et date
 - position de Bois d’Olives publiée de manière approximative
 - structure REUNION_MAP_POINTS prête pour ajouter de futurs contributeurs
+
+Version 20 :
+- carte interactive autonome sans Leaflet ni tuiles externes
+- fond de carte local intégré au site
+- points cliquables avec filtres satellite/statut
+- fiche détaillée par lieu d’essai
+- fonctionnement plus fiable sur GitHub Pages et en ouverture locale
+
+Version 21 :
+- carte régionale interactive Afrique & océan Indien
+- points La Réunion, Maurice, Madagascar, Mayotte, Seychelles
+- filtres satellite et statut
+- détails de réception au clic
+- La Réunion conservée en zoom local
+- carte autonome sans dépendance externe

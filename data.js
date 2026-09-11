@@ -117,6 +117,8 @@ const REUNION_MAP_POINTS = [
     area:"Sud de La Réunion",
     lat:-21.300,
     lng:55.470,
+    x:47.0,
+    y:67.0,
     approximate:true,
     tester:"FR1DI",
     notes:"Station de référence DXSat 974 — position cartographique approximative.",

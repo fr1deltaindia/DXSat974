@@ -105,3 +105,16 @@ Version 15 corrigée :
 - conservation des liens vers les sites officiels
 - rubrique Diffuseurs recentrée sur la présentation de DXSat 974
 - seul le contact fr1deltaindia@gmail.com reste affiché publiquement
+
+Version 16 :
+- ajout d'une rubrique Contributeurs & remerciements
+- station de référence FR1DI
+- mise en avant des tests terrain et du matériel utilisé
+- emplacement pour les futurs contributeurs
+- publication des noms/indicatifs uniquement avec accord
+
+Version 17 :
+- remplacement de la logique "fiche contributeur" par "Tests réussis & remerciements"
+- chaque essai confirmé peut créditer le testeur
+- publication du lieu d'essai, satellite, fréquence/chaîne, matériel, résultat et date
+- remerciement associé à chaque confirmation de réception

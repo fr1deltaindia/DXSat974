@@ -121,3 +121,13 @@ code{background:#081522;border:1px solid #1b3851;border-radius:6px;padding:2px 5
 .broadcaster-intro{margin-bottom:4px}
 .broadcaster-note{margin-top:18px}
 @media(max-width:800px){.broadcaster-grid{grid-template-columns:1fr}}
+
+.contributors-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+.contributor-card{display:grid;grid-template-columns:86px 1fr;gap:16px;align-items:start;background:linear-gradient(180deg,#102741,#0a1727);border:1px solid var(--line);border-radius:18px;padding:20px}
+.contributor-avatar{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#0d5e86;border:1px solid #2f7ba4;font-weight:900;font-size:1.05rem}
+.contributor-role{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent2);font-weight:800;margin-bottom:4px}
+.contributor-card h3{margin:.15rem 0 .5rem}
+.contributor-card p{line-height:1.55}
+.thanks-card,.contributors-intro{margin-top:18px}
+.placeholder{border-style:dashed}
+@media(max-width:800px){.contributors-grid{grid-template-columns:1fr}.contributor-card{grid-template-columns:72px 1fr}}

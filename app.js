@@ -3,12 +3,12 @@ const I18N={
 fr:{
 heroEyebrow:"Réception satellite DX — Afrique & Océan Indien",
 heroLead:"Base de réception satellite Ku et C-band couvrant l’Afrique, Madagascar et l’océan Indien, avec La Réunion comme station de référence.",
-navNews:"Actualités",navTests:"Réceptions DX",navSats:"Satellites",navBeams:"Faisceaux",navFta:"Chaînes FTA",navGear:"Matériel",navContrib:"Contribuer",
+navNews:"Actualités",navTests:"Réceptions DX",navSats:"Satellites",navBeams:"Faisceaux",navFta:"Chaînes FTA",navVhf:"VHF DX",navGear:"Matériel",navContrib:"Contribuer",
 statTests:"rapports de réception",statSats:"satellites suivis",statPlaces:"zones de réception",statFta:"services FTA recensés",
 newsEyebrow:"Veille orbitale & services",newsTitle:"Actualités & mouvements satellites",
 testsEyebrow:"Rapports terrain",testsTitle:"Réceptions DX",satsEyebrow:"Positions orbitales suivies",satsTitle:"Satellites",
 beamsEyebrow:"Couvertures",beamsTitle:"Faisceaux suivis",ftaEyebrow:"Télévision en clair",ftaTitle:"Chaînes FTA observées",
-gearEyebrow:"Station de référence",gearTitle:"Matériel utilisé à La Réunion",receivers:"Récepteurs",dishes:"Paraboles",
+vhfEyebrow:"Propagation radio",vhfTitle:"VHF DX — 144 MHz & océan Indien",vhfIntro:"Cette rubrique rassemble les essais VHF DX réalisés depuis La Réunion et, à terme, les rapports venant de l’océan Indien et de l’Afrique : liaisons 144 MHz, tropo, conduits maritimes, réflexions sur le relief, ouvertures exceptionnelles et comparaisons d’antennes.",vhfDate:"Date",vhfFrom:"Départ",vhfTo:"Arrivée",vhfFreq:"Fréquence",vhfMode:"Mode",vhfProp:"Propagation",vhfAnt:"Antenne",vhfPower:"Puissance",vhfReport:"Report",vhfNotes:"Observations",vhfPropTypes:"Types de propagation suivis",vhfPropTypesText:"Réflexion sur relief, propagation troposphérique, ducting maritime, trajets directs et ouvertures inhabituelles.",vhfZones:"Zones d’intérêt",vhfZonesText:"La Réunion, Maurice, Rodrigues, Madagascar, Mayotte, Mozambique, Afrique australe et Afrique de l’Est.",vhfGoal:"Objectif",vhfGoalText:"Construire une base de rapports réels permettant de comparer distance, relief, météo, antennes, polarisation et niveaux reçus.",gearEyebrow:"Station de référence",gearTitle:"Matériel utilisé à La Réunion",receivers:"Récepteurs",dishes:"Paraboles",
 dishText:"Offset 85 cm, 1,20–1,30 m, avec essais de plus grand diamètre envisagés pour le C-band.",
 lnbText:"Premium X, Inverto 60 dB <0,2 dB, Bullseye 10 kHz et projet LNBF C-band.",
 contribEyebrow:"Communauté",contribTitle:"Contribuer à la base",
@@ -19,12 +19,12 @@ thDate:"Date",thSat:"Satellite",thPos:"Pos.",thBeam:"Faisceau",thPlace:"Lieu",th
 en:{
 heroEyebrow:"Satellite DX reception — Africa & Indian Ocean",
 heroLead:"Ku-band and C-band satellite reception database covering Africa, Madagascar and the Indian Ocean, with Reunion Island as the reference station.",
-navNews:"News",navTests:"DX reports",navSats:"Satellites",navBeams:"Beams",navFta:"FTA channels",navGear:"Equipment",navContrib:"Contribute",
+navNews:"News",navTests:"DX reports",navSats:"Satellites",navBeams:"Beams",navFta:"FTA channels",navVhf:"VHF DX",navGear:"Equipment",navContrib:"Contribute",
 statTests:"reception reports",statSats:"satellites tracked",statPlaces:"reception areas",statFta:"FTA services listed",
 newsEyebrow:"Orbital & service watch",newsTitle:"Satellite news & movements",
 testsEyebrow:"Field reports",testsTitle:"DX reception reports",satsEyebrow:"Tracked orbital positions",satsTitle:"Satellites",
 beamsEyebrow:"Coverage",beamsTitle:"Tracked beams",ftaEyebrow:"Free-to-air television",ftaTitle:"Observed FTA channels",
-gearEyebrow:"Reference station",gearTitle:"Equipment used in Reunion Island",receivers:"Receivers",dishes:"Dishes",
+vhfEyebrow:"Radio propagation",vhfTitle:"VHF DX — 144 MHz & Indian Ocean",vhfIntro:"This section gathers VHF DX tests carried out from Reunion Island and, over time, reports from the Indian Ocean and Africa: 144 MHz contacts, tropo, marine ducting, terrain reflections, exceptional openings and antenna comparisons.",vhfDate:"Date",vhfFrom:"From",vhfTo:"To",vhfFreq:"Frequency",vhfMode:"Mode",vhfProp:"Propagation",vhfAnt:"Antenna",vhfPower:"Power",vhfReport:"Report",vhfNotes:"Notes",vhfPropTypes:"Propagation types tracked",vhfPropTypesText:"Terrain reflection, tropospheric propagation, marine ducting, direct paths and unusual openings.",vhfZones:"Areas of interest",vhfZonesText:"Reunion Island, Mauritius, Rodrigues, Madagascar, Mayotte, Mozambique, Southern Africa and East Africa.",vhfGoal:"Goal",vhfGoalText:"Build a database of real reports to compare distance, terrain, weather, antennas, polarization and received levels.",gearEyebrow:"Reference station",gearTitle:"Equipment used in Reunion Island",receivers:"Receivers",dishes:"Dishes",
 dishText:"85 cm offset dish, 1.20–1.30 m dishes, with larger diameters planned for C-band tests.",
 lnbText:"Premium X, Inverto 60 dB <0.2 dB, Bullseye 10 kHz and planned C-band LNBF.",
 contribEyebrow:"Community",contribTitle:"Contribute to the database",
@@ -75,4 +75,24 @@ document.addEventListener("DOMContentLoaded",()=>{
  ["search","bandFilter","resultFilter"].forEach(id=>document.getElementById(id).addEventListener("input",renderTests));
  document.querySelectorAll(".lang-btn").forEach(b=>b.addEventListener("click",()=>applyLang(b.dataset.lang)));
  applyLang(localStorage.getItem("dxsat974_lang")||"fr");
+});
+
+
+function renderVhf(){
+ const q=(document.getElementById("vhfSearch")?.value||"").toLowerCase();
+ const p=document.getElementById("vhfPropFilter")?.value||"";
+ const rows=VHF_TESTS.filter(t=>{
+   const hay=Object.values(t).join(" ").toLowerCase();
+   return (!q||hay.includes(q))&&(!p||t.prop===p);
+ });
+ const el=document.getElementById("vhfBody");
+ if(!el) return;
+ el.innerHTML=rows.map(t=>`<tr>
+ <td>${t.date}</td><td>${t.from}</td><td>${t.to}</td><td>${t.freq}</td><td>${t.mode}</td>
+ <td>${t.prop}</td><td>${t.antenna}</td><td>${t.power}</td><td>${t.report}</td><td>${t.notes}</td>
+ </tr>`).join("");
+}
+window.addEventListener("DOMContentLoaded",()=>{
+ renderVhf();
+ ["vhfSearch","vhfPropFilter"].forEach(id=>document.getElementById(id)?.addEventListener("input",renderVhf));
 });

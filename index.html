@@ -37,6 +37,7 @@
       <a href="#satellites" data-i18n="navSats">Satellites</a>
       <a href="#faisceaux" data-i18n="navBeams">Faisceaux</a>
       <a href="#fta" data-i18n="navFta">Chaînes FTA</a>
+      <a href="#vhfdx" data-i18n="navVhf">VHF DX</a>
       <a href="#materiel" data-i18n="navGear">Matériel</a>
       <a href="#contribuer" data-i18n="navContrib">Contribuer</a>
     </div>
@@ -122,6 +123,66 @@
       <p class="eyebrow" data-i18n="ftaEyebrow">Télévision en clair</p>
       <h2 data-i18n="ftaTitle">Chaînes FTA observées</h2>
       <div id="ftaCards" class="grid three"></div>
+    </section>
+
+
+    <section id="vhfdx">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-i18n="vhfEyebrow">Propagation radio</p>
+          <h2 data-i18n="vhfTitle">VHF DX — 144 MHz & océan Indien</h2>
+        </div>
+        <div class="filters">
+          <input id="vhfSearch" type="search" placeholder="Lieu, fréquence, mode…">
+          <select id="vhfPropFilter">
+            <option value="">Tous types de propagation</option>
+            <option value="Réflexion relief">Réflexion relief</option>
+            <option value="Tropo">Tropo</option>
+            <option value="Ducting">Ducting</option>
+            <option value="Direct">Direct</option>
+            <option value="À déterminer">À déterminer</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="vhf-intro card">
+        <p data-i18n="vhfIntro">Cette rubrique rassemble les essais VHF DX réalisés depuis La Réunion et, à terme, les rapports venant de l’océan Indien et de l’Afrique : liaisons 144 MHz, tropo, conduits maritimes, réflexions sur le relief, ouvertures exceptionnelles et comparaisons d’antennes.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="vhfDate">Date</th>
+              <th data-i18n="vhfFrom">Départ</th>
+              <th data-i18n="vhfTo">Arrivée</th>
+              <th data-i18n="vhfFreq">Fréquence</th>
+              <th data-i18n="vhfMode">Mode</th>
+              <th data-i18n="vhfProp">Propagation</th>
+              <th data-i18n="vhfAnt">Antenne</th>
+              <th data-i18n="vhfPower">Puissance</th>
+              <th data-i18n="vhfReport">Report</th>
+              <th data-i18n="vhfNotes">Observations</th>
+            </tr>
+          </thead>
+          <tbody id="vhfBody"></tbody>
+        </table>
+      </div>
+
+      <div class="grid three vhf-cards">
+        <article class="card">
+          <h3 data-i18n="vhfPropTypes">Types de propagation suivis</h3>
+          <p data-i18n="vhfPropTypesText">Réflexion sur relief, propagation troposphérique, ducting maritime, trajets directs et ouvertures inhabituelles.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="vhfZones">Zones d’intérêt</h3>
+          <p data-i18n="vhfZonesText">La Réunion, Maurice, Rodrigues, Madagascar, Mayotte, Mozambique, Afrique australe et Afrique de l’Est.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="vhfGoal">Objectif</h3>
+          <p data-i18n="vhfGoalText">Construire une base de rapports réels permettant de comparer distance, relief, météo, antennes, polarisation et niveaux reçus.</p>
+        </article>
+      </div>
     </section>
 
     <section id="materiel">

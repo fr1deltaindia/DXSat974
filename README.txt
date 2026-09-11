@@ -17,3 +17,9 @@ Nouveautés :
 
 Mise à jour GitHub :
 remplacez les anciens fichiers index.html, styles.css, data.js et app.js par ceux de cette version.
+
+Version 5 :
+- ajout d'une rubrique VHF DX 144 MHz
+- journal des liaisons avec départ, arrivée, fréquence, mode, type de propagation, antenne, puissance et report
+- intégration des essais Bois d'Olives ↔ Quartier Français
+- structure ouverte aux rapports VHF de l'océan Indien et de l'Afrique

@@ -11,3 +11,7 @@ main section{padding:50px 0;border-bottom:1px solid rgba(255,255,255,.06)}.stats
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.grid.three{grid-template-columns:repeat(3,1fr)}.pos{font-size:1.6rem;color:var(--accent);font-weight:900}.muted,.sat-card p,.beam-card p,.fta-card p,.news-card p,.card p{color:var(--muted);line-height:1.6}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.tag{font-size:.76rem;padding:5px 8px;border-radius:999px;background:#102b45;color:#cdefff;border:1px solid #224862}
 .news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.news-date{font-size:.78rem;color:var(--accent2);font-weight:800}.news-type{display:inline-block;margin:8px 0;padding:5px 8px;border-radius:999px;background:#173454;color:#d9f4ff;font-size:.76rem;font-weight:800}
 @media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.grid,.grid.three,.news-grid{grid-template-columns:1fr}.topbar{flex-direction:column}.lang-switch{align-self:flex-start}}
+
+.vhf-intro{margin-bottom:18px}
+.vhf-cards{margin-top:18px}
+#vhfdx table{min-width:1450px}

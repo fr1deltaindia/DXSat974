@@ -43,3 +43,10 @@ const NEWS = [
  {date:"2026-09-11",type:"Projet C-band",title:"Eutelsat 3B ajouté aux essais",text:"Préparation d’essais du faisceau C-band Global avec LNBF C-band et parabole adaptée."},
  {date:"2026-09-11",type:"Élargissement",title:"DXSat 974 devient Afrique & Océan Indien",text:"La base est désormais conçue pour accueillir des rapports provenant de toute la zone couverte par les faisceaux suivis."}
 ];
+
+
+const VHF_TESTS = [
+ {date:"2026-08-11",from:"Bois d’Olives, Saint-Pierre",to:"Quartier Français, Sainte-Suzanne",freq:"145.500 MHz",mode:"FM",prop:"Réflexion relief",antenna:"Yagi 9 él. H",power:"50 W",report:"S2 → S4 côté correspondant",notes:"Liaison obtenue via réflexion vers le Piton des Neiges. Polarisation horizontale."},
+ {date:"2026-08-18",from:"Bois d’Olives, Saint-Pierre",to:"Quartier Français, Sainte-Suzanne",freq:"145.510 MHz",mode:"FM",prop:"Réflexion relief",antenna:"Yagi 9 él. H",power:"50 W",report:"Bonne radio / signal variable",notes:"La Yagi 9 éléments s’est montrée plus efficace que la 17 éléments sur ce trajet."},
+ {date:"2026-08-18",from:"Bois d’Olives, Saint-Pierre",to:"Quartier Français, Sainte-Suzanne",freq:"145.510 MHz",mode:"FM",prop:"Réflexion relief",antenna:"Yagi 17 él. H",power:"50 W",report:"Moins bon que 9 él.",notes:"Essai comparatif de directivité et largeur de faisceau sur trajet réfléchi."}
+];

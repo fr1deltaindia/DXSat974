@@ -97,3 +97,17 @@ code{background:#081522;border:1px solid #1b3851;border-radius:6px;padding:2px 5
 .site-tagline{max-width:980px;margin-top:8px}
 .site-tagline h2{font-size:clamp(1.25rem,2.4vw,2rem);margin:.25rem 0 .45rem;line-height:1.25;color:#f2f8ff}
 .site-tagline p{margin:0;color:#bcd1e5;line-height:1.6;font-size:1rem}
+
+.gear-grid{display:grid;grid-template-columns:1fr;gap:18px}
+.gear-card{display:grid;grid-template-columns:300px 1fr;gap:24px;background:linear-gradient(180deg,#102741,#0a1727);border:1px solid var(--line);border-radius:20px;padding:22px}
+.gear-card.featured{border-color:#2e6b94}
+.gear-photo-wrap{background:#fff;border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:center;min-height:240px}
+.gear-photo{max-width:100%;max-height:260px;object-fit:contain}
+.gear-kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent2);font-weight:800}
+.gear-content h3{font-size:1.6rem;margin:.35rem 0}
+.gear-specs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:16px 0}
+.gear-specs div{background:#091828;border:1px solid #1b3851;border-radius:12px;padding:11px}
+.gear-specs span{display:block;color:var(--muted);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.gear-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.station-note{margin-top:18px}
+@media(max-width:800px){.gear-card{grid-template-columns:1fr}.gear-specs{grid-template-columns:1fr}}

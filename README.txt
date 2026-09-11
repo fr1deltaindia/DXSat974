@@ -73,3 +73,21 @@ Version 12 :
 - titre SEO mis à jour
 - description SEO mise à jour
 - version anglaise intégrée
+
+Version 13 — SEO / visibilité :
+- pages HTML séparées pour chaque satellite principal
+- sitemap.xml
+- robots.txt
+- balises canonical
+- meta descriptions dédiées
+- Open Graph sur la page d'accueil
+- page Dernières mises à jour
+- liens internes entre accueil et fiches satellites
+
+Version 14 :
+- rubrique Matériel & stations
+- fiche GTMEDIA V8 Finder 2
+- lien fiche officielle GTMEDIA
+- lien Download Center / notice
+- lien de recherche AliExpress
+- champs contributeur pour référence du mesureur et photos de station

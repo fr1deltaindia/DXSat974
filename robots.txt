@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fr1deltaindia.github.io/DXSat974/sitemap.xml

@@ -118,3 +118,17 @@ Version 17 :
 - chaque essai confirmé peut créditer le testeur
 - publication du lieu d'essai, satellite, fréquence/chaîne, matériel, résultat et date
 - remerciement associé à chaque confirmation de réception
+
+Version 18 :
+- intégration de la carte des essais de réception à La Réunion
+- ajout d’une section dédiée "Carte Réunion" sur la page d’accueil
+- image disponible en grand format dans le site
+- base pour une future carte interactive
+
+Version 19 :
+- vraie carte interactive OpenStreetMap/Leaflet de La Réunion
+- points cliquables par lieu d’essai
+- filtres par satellite et résultat
+- panneau détaillé : fréquence, service, parabole, matériel, mesure et date
+- position de Bois d’Olives publiée de manière approximative
+- structure REUNION_MAP_POINTS prête pour ajouter de futurs contributeurs

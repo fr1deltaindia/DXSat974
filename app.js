@@ -188,3 +188,80 @@ window.addEventListener("DOMContentLoaded",()=>{
   buildContributionMailto();
   document.getElementById("copyReport")?.addEventListener("click",copyContributionTemplate);
 });
+
+
+function initReunionMap(){
+  const mapEl=document.getElementById('reunionMap');
+  if(!mapEl || typeof L==='undefined' || typeof REUNION_MAP_POINTS==='undefined') return;
+
+  const map=L.map('reunionMap',{scrollWheelZoom:false}).setView([-21.13,55.53],10);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    maxZoom:19,
+    attribution:'&copy; OpenStreetMap contributors'
+  }).addTo(map);
+  L.control.scale({imperial:false}).addTo(map);
+
+  const satFilter=document.getElementById('mapSatelliteFilter');
+  const statusFilter=document.getElementById('mapStatusFilter');
+  const resetBtn=document.getElementById('mapReset');
+  const detail=document.getElementById('mapDetail');
+  const layer=L.layerGroup().addTo(map);
+
+  const sats=[...new Set(REUNION_MAP_POINTS.flatMap(p=>p.tests.map(t=>t.sat)))].sort();
+  sats.forEach(s=>{const o=document.createElement('option');o.value=s;o.textContent=s;satFilter.appendChild(o);});
+
+  function colorFor(statuses){
+    if(statuses.some(s=>s==='Stable')) return '#22c55e';
+    if(statuses.some(s=>s==='Limite')) return '#f59e0b';
+    if(statuses.some(s=>s==='Non reçu')) return '#ef4444';
+    return '#94a3b8';
+  }
+
+  function filteredTests(point){
+    return point.tests.filter(t=>(!satFilter.value || t.sat===satFilter.value) && (!statusFilter.value || t.status===statusFilter.value));
+  }
+
+  function renderDetail(point, tests){
+    const cards=tests.map(t=>`<article class="map-test">
+      <h4>${escapeHtml(t.sat)} — ${escapeHtml(t.pos)}</h4>
+      <div class="map-test-grid">
+        <div><span>Fréquence</span><br><strong>${escapeHtml(t.freq)}</strong></div>
+        <div><span>Service</span><br><strong>${escapeHtml(t.service)}</strong></div>
+        <div><span>Parabole</span><br><strong>${escapeHtml(t.dish)}</strong></div>
+        <div><span>Mesure</span><br><strong>${escapeHtml(t.measure)}</strong></div>
+        <div><span>Matériel</span><br><strong>${escapeHtml(t.equipment)}</strong></div>
+        <div><span>Date</span><br><strong>${escapeHtml(t.date)}</strong></div>
+      </div>
+      <div class="map-status">${escapeHtml(t.status)}</div>
+    </article>`).join('');
+    detail.innerHTML=`<div class="map-location-head"><div class="contributor-role">Lieu d’essai</div><h3>${escapeHtml(point.name)}</h3><div class="map-location-meta">${escapeHtml(point.area)} · ${point.approximate?'Position approximative · ':''}Testeur : ${escapeHtml(point.tester||'Non renseigné')}</div><p class="muted">${escapeHtml(point.notes||'')}</p></div>${cards}`;
+  }
+
+  function render(){
+    layer.clearLayers();
+    let visible=0;
+    REUNION_MAP_POINTS.forEach(point=>{
+      const tests=filteredTests(point);
+      if(!tests.length) return;
+      visible++;
+      const color=colorFor(tests.map(t=>t.status));
+      const marker=L.circleMarker([point.lat,point.lng],{radius:10,color:'#ffffff',weight:2,fillColor:color,fillOpacity:.95}).addTo(layer);
+      marker.bindTooltip(`${point.name} · ${tests.length} essai${tests.length>1?'s':''}`);
+      marker.on('click',()=>renderDetail(point,tests));
+    });
+    if(!visible){
+      detail.innerHTML='<div class="map-detail-empty"><span class="map-detail-icon">🔎</span><h3>Aucun essai correspondant</h3><p class="muted">Modifiez les filtres pour afficher d’autres résultats.</p></div>';
+    }
+  }
+
+  satFilter.addEventListener('change',render);
+  statusFilter.addEventListener('change',render);
+  resetBtn.addEventListener('click',()=>{satFilter.value='';statusFilter.value='';render();map.setView([-21.13,55.53],10);detail.innerHTML='<div class="map-detail-empty"><span class="map-detail-icon">📍</span><h3>Sélectionnez un lieu d’essai</h3><p class="muted">Les informations détaillées apparaîtront ici.</p></div>';});
+  render();
+}
+
+function escapeHtml(value){
+  return String(value??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+}
+
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initReunionMap); else initReunionMap();

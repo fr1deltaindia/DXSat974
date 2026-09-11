@@ -108,3 +108,30 @@ const QUICK_POINTING = [
  {sat:"Intelsat 20",pos:"68,5°E",band:"Ku",freq:"12682 V 30000",beam:"Africa / Indian Ocean",dish:"80 cm à 1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"11/09/2026"},
  {sat:"Eutelsat 3B",pos:"3°E",band:"C",freq:"À confirmer avant pointage",beam:"C-band Global",dish:"1,20 m minimum conseillé",lnb:"C-band — LO 5150",difficulty:"DX",checked:"11/09/2026"}
 ];
+
+
+const REUNION_MAP_POINTS = [
+  {
+    id:"saint-pierre-bois-olives",
+    name:"Bois d’Olives / Saint-Pierre",
+    area:"Sud de La Réunion",
+    lat:-21.300,
+    lng:55.470,
+    approximate:true,
+    tester:"FR1DI",
+    notes:"Station de référence DXSat 974 — position cartographique approximative.",
+    tests:[
+      {sat:"Eutelsat 16A",pos:"16°E",freq:"10803 H 30000",service:"Canal 2 International / Africa TV3",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2 / Octagon SF8008",measure:"S93 / Q69",status:"Stable",date:"13/08/2026"},
+      {sat:"Eutelsat 16A",pos:"16°E",freq:"12520 H 30000",service:"AC TV, EP TV, Elohim TV…",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2",measure:"S91 / Q52",status:"Stable",date:"13/08/2026"},
+      {sat:"Eutelsat 16A",pos:"16°E",freq:"12687 H 29997",service:"QTV Gambia",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2",measure:"S92 / Q66",status:"Stable",date:"13/08/2026"},
+      {sat:"Eutelsat 16A",pos:"16°E",freq:"12728 H 30000",service:"Sen TV, VTV, LM TV…",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2",measure:"S91 / Q52",status:"Stable",date:"13/08/2026"},
+      {sat:"Eutelsat 7B/7C",pos:"7°E",freq:"10887 H 30000",service:"JW Broadcasting",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2",measure:"S95 / Q63",status:"Stable",date:"13/08/2026"},
+      {sat:"Eutelsat 7B/7C",pos:"7°E",freq:"11356 H 34995",service:"Bouquet Zimbabwe",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2",measure:"S95 / Q63",status:"Stable",date:"13/08/2026"},
+      {sat:"Eutelsat 7B/7C",pos:"7°E",freq:"11595 H 30000",service:"Test faisceau South-East Africa",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2",measure:"S60 / Q0",status:"Non reçu",date:"13/08/2026"},
+      {sat:"Eutelsat 36E",pos:"36°E",freq:"12418 H 27499",service:"DISH / ODS VOD",dish:"85 cm",equipment:"GTMEDIA V8 Finder 2",measure:"S92 / Q72",status:"Stable",date:"13/08/2026"},
+      {sat:"SES-5",pos:"5°E",freq:"11904 H 27500",service:"BTM TV",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2",measure:"S80 / Q80",status:"Stable",date:"13/08/2026"},
+      {sat:"Intelsat 20",pos:"68,5°E",freq:"12647 V 4166",service:"BTV DSN",dish:"80 cm",equipment:"GTMEDIA V8 Finder 2 / Freesat V7",measure:"Image OK",status:"Stable",date:"13/08/2026"},
+      {sat:"Eutelsat 3B",pos:"3°E",freq:"C-band Global",service:"Essai C-band prévu",dish:"1,00–1,20 m",equipment:"LNBF C-band à installer",measure:"Projet",status:"À tester",date:"11/09/2026"}
+    ]
+  }
+];

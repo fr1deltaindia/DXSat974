@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="DXSat 974 — Guide pratique de réception satellite et VHF DX pour l’Afrique et l’océan Indien : essais réels, réglages rapides, fréquences, faisceaux, cartes officielles et rapports de propagation.">
   <title>DXSat 974 — Guide pratique de réception satellite et VHF DX pour l’Afrique et l’océan Indien</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQ3ynOSWqKZq8F0RzGZ93yWQh5B2F5Q=" crossorigin="">
   <link rel="stylesheet" href="styles.css">
 <link rel="canonical" href="https://fr1deltaindia.github.io/DXSat974/">
 <meta property="og:title" content="DXSat 974 — Guide pratique satellite & VHF DX">
@@ -46,6 +47,7 @@
       <a href="#accueil">Accueil</a>
       <a href="updates.html">Dernières mises à jour</a>
       <a href="#pointage-rapide">Réglage rapide</a>
+      <a href="#carte-reunion">Carte Réunion</a>
       <a href="#actus" data-i18n="navNews">Actualités</a>
       <a href="#essais" data-i18n="navTests">Réceptions DX</a>
       <a href="#satellites" data-i18n="navSats">Satellites</a>
@@ -97,6 +99,55 @@
       <div><span class="trust-dot watch"></span><strong>À surveiller</strong><small>information en évolution</small></div>
       <div><span class="trust-dot planned"></span><strong>À tester</strong><small>essai prévu</small></div>
     </div>
+  </div>
+</section>
+
+
+
+<section id="carte-reunion" class="interactive-map-section">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Carte interactive des essais</p>
+      <h2>Réception satellite à La Réunion</h2>
+    </div>
+  </div>
+  <p class="section-intro">
+    Cliquez sur un point pour voir les satellites testés dans cette zone, les fréquences, le matériel utilisé et le résultat. Les positions publiées sont volontairement approximatives afin de respecter la vie privée des testeurs.
+  </p>
+
+  <div class="map-controls card">
+    <label>Satellite
+      <select id="mapSatelliteFilter"><option value="">Tous les satellites</option></select>
+    </label>
+    <label>Résultat
+      <select id="mapStatusFilter">
+        <option value="">Tous les résultats</option>
+        <option value="Stable">Reçu / Stable</option>
+        <option value="Limite">Limite</option>
+        <option value="Non reçu">Non reçu</option>
+        <option value="À tester">À tester</option>
+      </select>
+    </label>
+    <button class="btn" id="mapReset" type="button">Réinitialiser</button>
+  </div>
+
+  <div class="interactive-map-layout">
+    <div id="reunionMap" class="reunion-map" aria-label="Carte interactive des essais de réception satellite à La Réunion"></div>
+    <aside class="map-detail card" id="mapDetail" aria-live="polite">
+      <div class="map-detail-empty">
+        <span class="map-detail-icon">📍</span>
+        <h3>Sélectionnez un lieu d’essai</h3>
+        <p class="muted">Les informations détaillées apparaîtront ici.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="map-legend card">
+    <strong>Légende :</strong>
+    <span><i class="dot dot-stable"></i> Reçu / Stable</span>
+    <span><i class="dot dot-limit"></i> Limite</span>
+    <span><i class="dot dot-fail"></i> Non reçu</span>
+    <span><i class="dot dot-planned"></i> À tester</span>
   </div>
 </section>
 
@@ -607,6 +658,7 @@ Lien photo éventuel :</pre>
     <div class="wrap" data-i18n="footer">DXSat 974 — Base indépendante de réception satellite pour l’Afrique et l’océan Indien.</div>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="data.js"></script>
   <script src="app.js"></script>
 <!-- Cloudflare Web Analytics -->

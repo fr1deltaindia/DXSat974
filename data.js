@@ -19,3 +19,10 @@ const SATS=[
 ["Intelsat 20","68,5°E","Nombreux transpondeurs Ku déjà reçus."],
 ["Eutelsat 3B","3°E","Nouvelle cible en C-band Global et tests Ku."]
 ];
+
+const NEWS=[
+{date:"2026-09-11",sat:"Eutelsat 7B",type:"Mouvement orbital",title:"Eutelsat 7B poursuit son déplacement vers l’est",text:"KingOfSat répertorie actuellement Eutelsat 7B en mouvement vers l’est, autour de 14°E, à environ 0,66° par jour. La destination finale reste à confirmer officiellement.",source:"KingOfSat",url:"https://en.kingofsat.net/sat-e7b"},
+{date:"2026-09-10",sat:"Eutelsat 16A",type:"Transpondeur",title:"Surveillance renforcée des changements à 16°E",text:"Les listes de services de la position 16°E continuent d’être mises à jour. DXSat 974 surveille en priorité les modifications susceptibles d’affecter les faisceaux Afrique / océan Indien et TV Malagasy 11024 H 3333.",source:"KingOfSat",url:"https://en.kingofsat.tv/new.php?aff=list&filtre=no&lim=20&ordre=sid&standard=All&tp=6086"},
+{date:"2026-09-11",sat:"Eutelsat 3B",type:"Test",title:"Ouverture des essais C-band sur 3°E",text:"Nouvelle cible DXSat 974 : test du faisceau global bande C d’Eutelsat 3B avec LNBF C-band et comparaison avec les faisceaux Ku.",source:"DXSat 974",url:""},
+{date:"2026-09-11",sat:"Eutelsat 7C",type:"Test",title:"Recherche des transpondeurs Africa réellement reçus à La Réunion",text:"Les futurs blind scans seront consignés ici afin d’identifier les nouvelles chaînes FTA et les changements de paramètres observables depuis Bois d’Olives.",source:"DXSat 974",url:""}
+];

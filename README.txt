@@ -52,3 +52,12 @@ Version 9 :
 - intégration de Cloudflare Web Analytics
 - suivi des visites et statistiques agrégées
 - possibilité de consulter les pays d'origine dans le tableau de bord Cloudflare
+
+Version 10 :
+- nouvelle rubrique Contribuer par e-mail
+- modèle standardisé à copier
+- bouton mailto prérempli
+- workflow de validation avant publication
+- variable CONTRIBUTION_EMAIL dans app.js à renseigner avec l'adresse de réception
+
+Adresse de contribution configurée : fr1deltaindia@gmail.com

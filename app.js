@@ -153,3 +153,38 @@ function renderQuick(){
   </tr>`).join("");
 }
 window.addEventListener("DOMContentLoaded",renderQuick);
+
+
+const CONTRIBUTION_EMAIL = "fr1deltaindia@gmail.com"; // Exemple : "votre-adresse@gmail.com"
+
+function buildContributionMailto(){
+  const link=document.getElementById("mailtoReport");
+  const template=document.getElementById("mailTemplate");
+  if(!link || !template) return;
+  const subject="CONTRIBUTION DXSAT974";
+  const body=template.textContent.replace(/^Objet :.*\n\n?/,"");
+  if(CONTRIBUTION_EMAIL){
+    link.href=`mailto:${CONTRIBUTION_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }else{
+    link.href=`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+}
+async function copyContributionTemplate(){
+  const template=document.getElementById("mailTemplate");
+  const button=document.getElementById("copyReport");
+  if(!template) return;
+  try{
+    await navigator.clipboard.writeText(template.textContent);
+    if(button){
+      const old=button.textContent;
+      button.textContent="Modèle copié ✓";
+      setTimeout(()=>button.textContent=old,1800);
+    }
+  }catch(e){
+    alert("Sélectionnez le modèle et copiez-le manuellement.");
+  }
+}
+window.addEventListener("DOMContentLoaded",()=>{
+  buildContributionMailto();
+  document.getElementById("copyReport")?.addEventListener("click",copyContributionTemplate);
+});

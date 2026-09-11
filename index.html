@@ -269,13 +269,69 @@
       </div>
     </section>
 
-    <section id="contribuer">
-      <p class="eyebrow" data-i18n="contribEyebrow">Communauté</p>
-      <h2 data-i18n="contribTitle">Contribuer à la base</h2>
-      <div class="card">
-        <p data-i18n="contribText">Les rapports provenant de Madagascar, Maurice, Mayotte, Seychelles, Afrique australe, Afrique de l’Est et autres zones couvertes sont les bienvenus. Pour chaque réception : lieu, satellite, fréquence, polarisation, SR, bande, faisceau supposé, diamètre de parabole, LNB, SNR/qualité, météo et résultat.</p>
+    
+<section id="contribuer">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Communauté DX</p>
+      <h2>Contribuer par e-mail</h2>
+    </div>
+  </div>
+
+  <div class="contrib-layout">
+    <article class="card">
+      <h3>Envoyer un rapport de réception</h3>
+      <p>
+        Vous avez reçu un satellite, une chaîne FTA, un feed, ou réalisé une liaison VHF DX en Afrique ou dans l’océan Indien ?
+        Envoyez votre essai par e-mail. Les rapports sont vérifiés avant publication.
+      </p>
+
+      <div class="contrib-actions">
+        <button class="btn primary" id="copyReport">Copier le modèle d’e-mail</button>
+        <a class="btn" id="mailtoReport" href="#">Ouvrir mon logiciel de messagerie</a>
       </div>
-    </section>
+
+      <p class="muted small">
+        L’adresse de contribution peut être configurée dans <code>app.js</code> avec la variable <code>CONTRIBUTION_EMAIL</code>.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Format demandé</h3>
+      <pre class="mail-template" id="mailTemplate">Objet : CONTRIBUTION DXSAT974
+
+Nom / indicatif :
+Pays / ville :
+Type d’essai : Satellite / VHF
+Satellite :
+Position orbitale :
+Bande : Ku / C / VHF
+Fréquence :
+Polarisation :
+Symbol Rate :
+Faisceau supposé :
+Parabole / antenne :
+LNB / matériel :
+SNR / qualité :
+Résultat : Stable / Limite / Détecté / Non reçu
+Date et heure :
+Météo :
+Commentaire :
+Lien photo éventuel :</pre>
+    </article>
+  </div>
+
+  <article class="card workflow-card">
+    <h3>Comment votre rapport sera traité</h3>
+    <div class="workflow">
+      <div><span>1</span><strong>E-mail reçu</strong><p>Le contributeur envoie son essai au format DXSat 974.</p></div>
+      <div><span>2</span><strong>Vérification</strong><p>Les données sont contrôlées : fréquence, satellite, cohérence du matériel et résultat.</p></div>
+      <div><span>3</span><strong>Normalisation</strong><p>Le rapport est transformé en fiche standard compatible avec la base du site.</p></div>
+      <div><span>4</span><strong>Publication</strong><p>Le rapport validé est ajouté aux essais DX, avec le lieu et la date.</p></div>
+    </div>
+  </article>
+</section>
+
   </main>
 
   <footer>

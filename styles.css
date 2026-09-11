@@ -15,3 +15,19 @@ main section{padding:50px 0;border-bottom:1px solid rgba(255,255,255,.06)}.stats
 .vhf-intro{margin-bottom:18px}
 .vhf-cards{margin-top:18px}
 #vhfdx table{min-width:1450px}
+
+.section-intro{max-width:900px;color:var(--muted);line-height:1.65;margin-top:-8px;margin-bottom:22px}
+.sat-profile-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.sat-profile{background:linear-gradient(180deg,#102741,#0a1727);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 10px 32px rgba(0,0,0,.18)}
+.sat-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.sat-head h3{font-size:1.35rem;margin:.2rem 0 0}
+.operator{border:1px solid #31516d;border-radius:999px;padding:6px 10px;color:#cdefff;font-size:.76rem;font-weight:800;background:#0c1d30}
+.sat-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+.sat-meta>div{background:#091828;border:1px solid #1b3851;border-radius:12px;padding:11px}
+.meta-label{display:block;color:var(--muted);font-size:.75rem;margin-bottom:4px;text-transform:uppercase;letter-spacing:.08em}
+.profile-block{margin-top:16px}.profile-block h4{margin:0 0 8px;color:#dff6ff}.profile-block p{margin:0;color:var(--muted);line-height:1.55}
+.sat-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-block;text-decoration:none;border:1px solid #2d5677;color:#dff5ff;background:#0b1d2f;border-radius:10px;padding:10px 12px;font-weight:800;font-size:.88rem}
+.btn:hover{background:#102b45}.btn.primary{background:#0f5e86;border-color:#247fac}
+.btn.primary:hover{background:#14739f}
+@media(max-width:900px){.sat-profile-grid{grid-template-columns:1fr}.sat-meta{grid-template-columns:1fr 1fr}}

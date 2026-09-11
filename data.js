@@ -13,12 +13,60 @@ const TESTS = [
 ];
 
 const SATELLITES = [
- {name:"Eutelsat 16A",pos:"16°E",zones:["Afrique","Madagascar","Océan Indien"],bands:["Ku"],desc:"Position majeure pour les services africains et de l’océan Indien."},
- {name:"Eutelsat 7B / 7C",pos:"7°E",zones:["Afrique de l’Est","Afrique australe","Océan Indien"],bands:["Ku"],desc:"Faisceaux Africa et South-East Africa, intéressants pour le DX régional."},
- {name:"Eutelsat 3B",pos:"3°E",zones:["Afrique","Océan Indien","Global"],bands:["C","Ku"],desc:"Satellite tri-bande ; le faisceau C-band Global est une cible importante pour le projet."},
- {name:"SES-5",pos:"5°E",zones:["Afrique"],bands:["Ku"],desc:"Bonne cible pour les chaînes et services africains."},
- {name:"Eutelsat 36E",pos:"36°E",zones:["Afrique"],bands:["Ku"],desc:"Nombreuses porteuses africaines déjà reçues depuis La Réunion."},
- {name:"Intelsat 20",pos:"68,5°E",zones:["Afrique","Océan Indien"],bands:["Ku"],desc:"Position très intéressante pour les bouquets et feeds africains."}
+ {
+   name:"Eutelsat 16A",pos:"16°E",operator:"Eutelsat",launch:"2011",
+   bands:["Ku","Ka"],
+   beams:["Ku Africa","Ku South-East Africa / Indian Ocean","Ku Europe A/B"],
+   zones:["Afrique subsaharienne","Madagascar","La Réunion","Mayotte","Océan Indien","Europe"],
+   dx:"Très important pour DXSat 974 : plusieurs transpondeurs africains et de l’océan Indien ont été reçus à La Réunion.",
+   officialMap:"https://www.eutelsat.com/satellite-network/GEO-fleet/eutelsat-16-east",
+   officialPdf:"https://www.eutelsat.com/sites/default/files/satellite_imported_documents/EUTELSAT_SATELLITE_E16A.pdf"
+ },
+ {
+   name:"Eutelsat 7C",pos:"7°E",operator:"Eutelsat",launch:"2019",
+   bands:["Ku"],
+   beams:["Ku West","Ku East","Steerable / Africa capacity"],
+   zones:["Afrique subsaharienne","Afrique de l’Est","Moyen-Orient","Europe","Asie centrale"],
+   dx:"Cible importante pour les chaînes africaines. Les résultats réels depuis l’océan Indien sont à comparer faisceau par faisceau.",
+   officialMap:"https://www.eutelsat.com/satellite-network/GEO-fleet/eutelsat-7-east",
+   officialPdf:"https://www.eutelsat.com/sites/default/files/satellite_imported_documents/EUTELSAT_SATELLITE_E7C_14.pdf"
+ },
+ {
+   name:"Eutelsat 3B",pos:"3°E",operator:"Eutelsat",launch:"2014",
+   bands:["C","Ku","Ka"],
+   beams:["C-band Global","Ku Europe","Ku East","Ku steerable"],
+   zones:["Afrique","Océan Indien","Moyen-Orient","Asie centrale","Amérique du Sud"],
+   dx:"Très intéressant pour les futurs essais C-band : le faisceau C Global couvre une très grande zone incluant l’Afrique et l’océan Indien.",
+   officialMap:"https://www.eutelsat.com/satellite-network/GEO-fleet/eutelsat-3-east",
+   officialPdf:"https://www.eutelsat.com/system/files/2026-01/DOC_GEOFLEET_Satellite_Brochure_EUTELSAT-3B-EAST.pdf"
+ },
+ {
+   name:"SES-5",pos:"5°E",operator:"SES",launch:"2012",
+   bands:["Ku","C"],
+   beams:["Africa / Europe / Middle East selon charge utile"],
+   zones:["Afrique","Europe","Moyen-Orient"],
+   dx:"Position déjà reçue avec de bons niveaux depuis La Réunion. Utile comme référence de comparaison pour les essais africains.",
+   officialMap:"https://www.ses.com/our-coverage",
+   officialPdf:""
+ },
+ {
+   name:"Eutelsat 36C / 36D",pos:"36°E",operator:"Eutelsat",launch:"2015 / 2024",
+   bands:["Ku","Ka"],
+   beams:["36C Ku Sub-Saharan Africa","36D Ku African","36D Ku South African"],
+   zones:["Afrique subsaharienne","Afrique australe","Europe","Russie / CEI"],
+   dx:"Position très active pour l’Afrique. Plusieurs porteuses ont déjà été reçues à La Réunion avec une parabole de 85 cm.",
+   officialMap:"https://www.eutelsat.com/satellite-network/GEO-fleet/eutelsat-36-east",
+   officialPdf:"https://www.eutelsat.com/system/files/2026-01/DOC_GEOFLEET_Satellite_Brochure_EUTELSAT-36C-EAST.pdf"
+ },
+ {
+   name:"Intelsat 20",pos:"68.5°E",operator:"Intelsat",launch:"2012",
+   bands:["Ku","C"],
+   beams:["Ku Europe/Africa","Ku South Africa","C-band regional/global resources"],
+   zones:["Afrique","Afrique australe","Europe","Moyen-Orient","Océan Indien"],
+   dx:"Une des positions les plus intéressantes depuis La Réunion : nombreux transpondeurs Ku et feeds déjà observés.",
+   officialMap:"https://www.intelsat.com/fleetmaps/",
+   officialPdf:"https://www.intelsat.com/wp-content/uploads/2025/10/SatelliteGuide.pdf"
+ }
 ];
 
 const BEAMS = [

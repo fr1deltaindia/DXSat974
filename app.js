@@ -6,7 +6,7 @@ heroLead:"Base de réception satellite Ku et C-band couvrant l’Afrique, Madaga
 navNews:"Actualités",navTests:"Réceptions DX",navSats:"Satellites",navBeams:"Faisceaux",navFta:"Chaînes FTA",navVhf:"VHF DX",navGear:"Matériel",navContrib:"Contribuer",
 statTests:"rapports de réception",statSats:"satellites suivis",statPlaces:"zones de réception",statFta:"services FTA recensés",
 newsEyebrow:"Veille orbitale & services",newsTitle:"Actualités & mouvements satellites",
-testsEyebrow:"Rapports terrain",testsTitle:"Réceptions DX",satsEyebrow:"Positions orbitales suivies",satsTitle:"Satellites",
+testsEyebrow:"Rapports terrain",testsTitle:"Réceptions DX",satsEyebrow:"Positions orbitales suivies",satsTitle:"Fiches satellites",satIntro:"Chaque fiche regroupe les bandes, faisceaux, zones couvertes, observations DX et un accès direct à la carte de couverture officielle de l’opérateur.",
 beamsEyebrow:"Couvertures",beamsTitle:"Faisceaux suivis",ftaEyebrow:"Télévision en clair",ftaTitle:"Chaînes FTA observées",
 vhfEyebrow:"Propagation radio",vhfTitle:"VHF DX — 144 MHz & océan Indien",vhfIntro:"Cette rubrique rassemble les essais VHF DX réalisés depuis La Réunion et, à terme, les rapports venant de l’océan Indien et de l’Afrique : liaisons 144 MHz, tropo, conduits maritimes, réflexions sur le relief, ouvertures exceptionnelles et comparaisons d’antennes.",vhfDate:"Date",vhfFrom:"Départ",vhfTo:"Arrivée",vhfFreq:"Fréquence",vhfMode:"Mode",vhfProp:"Propagation",vhfAnt:"Antenne",vhfPower:"Puissance",vhfReport:"Report",vhfNotes:"Observations",vhfPropTypes:"Types de propagation suivis",vhfPropTypesText:"Réflexion sur relief, propagation troposphérique, ducting maritime, trajets directs et ouvertures inhabituelles.",vhfZones:"Zones d’intérêt",vhfZonesText:"La Réunion, Maurice, Rodrigues, Madagascar, Mayotte, Mozambique, Afrique australe et Afrique de l’Est.",vhfGoal:"Objectif",vhfGoalText:"Construire une base de rapports réels permettant de comparer distance, relief, météo, antennes, polarisation et niveaux reçus.",gearEyebrow:"Station de référence",gearTitle:"Matériel utilisé à La Réunion",receivers:"Récepteurs",dishes:"Paraboles",
 dishText:"Offset 85 cm, 1,20–1,30 m, avec essais de plus grand diamètre envisagés pour le C-band.",
@@ -22,7 +22,7 @@ heroLead:"Ku-band and C-band satellite reception database covering Africa, Madag
 navNews:"News",navTests:"DX reports",navSats:"Satellites",navBeams:"Beams",navFta:"FTA channels",navVhf:"VHF DX",navGear:"Equipment",navContrib:"Contribute",
 statTests:"reception reports",statSats:"satellites tracked",statPlaces:"reception areas",statFta:"FTA services listed",
 newsEyebrow:"Orbital & service watch",newsTitle:"Satellite news & movements",
-testsEyebrow:"Field reports",testsTitle:"DX reception reports",satsEyebrow:"Tracked orbital positions",satsTitle:"Satellites",
+testsEyebrow:"Field reports",testsTitle:"DX reception reports",satsEyebrow:"Tracked orbital positions",satsTitle:"Satellite profiles",satIntro:"Each profile gathers bands, beams, coverage areas, DX observations and direct access to the operator’s official coverage map.",
 beamsEyebrow:"Coverage",beamsTitle:"Tracked beams",ftaEyebrow:"Free-to-air television",ftaTitle:"Observed FTA channels",
 vhfEyebrow:"Radio propagation",vhfTitle:"VHF DX — 144 MHz & Indian Ocean",vhfIntro:"This section gathers VHF DX tests carried out from Reunion Island and, over time, reports from the Indian Ocean and Africa: 144 MHz contacts, tropo, marine ducting, terrain reflections, exceptional openings and antenna comparisons.",vhfDate:"Date",vhfFrom:"From",vhfTo:"To",vhfFreq:"Frequency",vhfMode:"Mode",vhfProp:"Propagation",vhfAnt:"Antenna",vhfPower:"Power",vhfReport:"Report",vhfNotes:"Notes",vhfPropTypes:"Propagation types tracked",vhfPropTypesText:"Terrain reflection, tropospheric propagation, marine ducting, direct paths and unusual openings.",vhfZones:"Areas of interest",vhfZonesText:"Reunion Island, Mauritius, Rodrigues, Madagascar, Mayotte, Mozambique, Southern Africa and East Africa.",vhfGoal:"Goal",vhfGoalText:"Build a database of real reports to compare distance, terrain, weather, antennas, polarization and received levels.",gearEyebrow:"Reference station",gearTitle:"Equipment used in Reunion Island",receivers:"Receivers",dishes:"Dishes",
 dishText:"85 cm offset dish, 1.20–1.30 m dishes, with larger diameters planned for C-band tests.",
@@ -51,7 +51,36 @@ function renderTests(){
  <td><span class="status ${statusClass(t.status)}">${t.status}</span></td></tr>`).join("");
 }
 function renderCards(){
- document.getElementById("satCards").innerHTML=SATELLITES.map(s=>`<article class="sat-card"><div class="pos">${s.pos}</div><h3>${s.name}</h3><p>${s.desc}</p><div class="tags">${s.bands.map(x=>`<span class="tag">${x}</span>`).join("")}${s.zones.map(x=>`<span class="tag">${x}</span>`).join("")}</div></article>`).join("");
+ document.getElementById("satCards").innerHTML=SATELLITES.map(s=>`
+ <article class="sat-profile">
+   <div class="sat-head">
+     <div>
+       <div class="pos">${s.pos}</div>
+       <h3>${s.name}</h3>
+     </div>
+     <span class="operator">${s.operator}</span>
+   </div>
+   <div class="sat-meta">
+     <div><span class="meta-label">Bandes</span><strong>${s.bands.join(" / ")}</strong></div>
+     <div><span class="meta-label">Lancement</span><strong>${s.launch}</strong></div>
+   </div>
+   <div class="profile-block">
+     <h4>Faisceaux utiles</h4>
+     <div class="tags">${s.beams.map(x=>`<span class="tag">${x}</span>`).join("")}</div>
+   </div>
+   <div class="profile-block">
+     <h4>Zones concernées</h4>
+     <p>${s.zones.join(" · ")}</p>
+   </div>
+   <div class="profile-block">
+     <h4>Intérêt DX</h4>
+     <p>${s.dx}</p>
+   </div>
+   <div class="sat-actions">
+     <a class="btn primary" href="${s.officialMap}" target="_blank" rel="noopener">Carte officielle ↗</a>
+     ${s.officialPdf ? `<a class="btn" href="${s.officialPdf}" target="_blank" rel="noopener">Brochure / PDF ↗</a>` : ""}
+   </div>
+ </article>`).join("");
  document.getElementById("beamCards").innerHTML=BEAMS.map(b=>`<article class="beam-card"><h3>${b.name}</h3><p><strong>${b.sat}</strong></p><p>${b.zone}</p><p>${b.note}</p></article>`).join("");
  document.getElementById("ftaCards").innerHTML=FTA.map(f=>`<article class="fta-card"><h3>${f.name}</h3><p>${f.sat}</p><p><strong>${f.freq}</strong></p><p>${f.place} — <span class="status ${statusClass(f.status)}">${f.status}</span></p></article>`).join("");
  document.getElementById("newsCards").innerHTML=NEWS.map(n=>`<article class="news-card"><div class="news-date">${n.date}</div><div class="news-type">${n.type}</div><h3>${n.title}</h3><p>${n.text}</p></article>`).join("");

@@ -23,3 +23,10 @@ Version 5 :
 - journal des liaisons avec départ, arrivée, fréquence, mode, type de propagation, antenne, puissance et report
 - intégration des essais Bois d'Olives ↔ Quartier Français
 - structure ouverte aux rapports VHF de l'océan Indien et de l'Afrique
+
+Version 6 :
+- fiches complètes pour chaque satellite suivi
+- bandes, faisceaux, zones couvertes et intérêt DX
+- bouton vers la carte de couverture officielle de l'opérateur
+- bouton brochure/PDF officiel quand disponible
+- Eutelsat 36°E mis à jour en 36C / 36D

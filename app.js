@@ -72,6 +72,10 @@ function renderCards(){
      <h4>Zones concernées</h4>
      <p>${s.zones.join(" · ")}</p>
    </div>
+   <div class="profile-block practical-box">
+     <h4>Réglage pratique</h4>
+     <p>Voir le tableau « Réglage rapide » pour la fréquence de pointage conseillée et la taille de parabole.</p>
+   </div>
    <div class="profile-block">
      <h4>Intérêt DX</h4>
      <p>${s.dx}</p>
@@ -128,3 +132,24 @@ window.addEventListener("DOMContentLoaded",()=>{
  renderVhf();
  ["vhfSearch","vhfPropFilter"].forEach(id=>document.getElementById(id)?.addEventListener("input",renderVhf));
 });
+
+
+function difficultyClass(d){
+  return d==="Facile"?"easy":d==="Moyen"?"medium":"dx";
+}
+function renderQuick(){
+  const el=document.getElementById("quickBody");
+  if(!el || typeof QUICK_POINTING==="undefined") return;
+  el.innerHTML=QUICK_POINTING.map(x=>`<tr>
+    <td><strong>${x.sat}</strong></td>
+    <td>${x.pos}</td>
+    <td>${x.band}</td>
+    <td><strong>${x.freq}</strong></td>
+    <td>${x.beam}</td>
+    <td>${x.dish}</td>
+    <td>${x.lnb}</td>
+    <td><span class="difficulty ${difficultyClass(x.difficulty)}">${x.difficulty}</span></td>
+    <td>${x.checked}</td>
+  </tr>`).join("");
+}
+window.addEventListener("DOMContentLoaded",renderQuick);

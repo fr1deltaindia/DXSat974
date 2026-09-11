@@ -98,3 +98,13 @@ const VHF_TESTS = [
  {date:"2026-08-18",from:"Bois d’Olives, Saint-Pierre",to:"Quartier Français, Sainte-Suzanne",freq:"145.510 MHz",mode:"FM",prop:"Réflexion relief",antenna:"Yagi 9 él. H",power:"50 W",report:"Bonne radio / signal variable",notes:"La Yagi 9 éléments s’est montrée plus efficace que la 17 éléments sur ce trajet."},
  {date:"2026-08-18",from:"Bois d’Olives, Saint-Pierre",to:"Quartier Français, Sainte-Suzanne",freq:"145.510 MHz",mode:"FM",prop:"Réflexion relief",antenna:"Yagi 17 él. H",power:"50 W",report:"Moins bon que 9 él.",notes:"Essai comparatif de directivité et largeur de faisceau sur trajet réfléchi."}
 ];
+
+
+const QUICK_POINTING = [
+ {sat:"Eutelsat 16A / 16D",pos:"16°E",band:"Ku",freq:"12520 H 30000",beam:"Africa",dish:"1,20 m recommandée",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"11/09/2026"},
+ {sat:"Eutelsat 7C",pos:"7°E",band:"Ku",freq:"11356 H 34995",beam:"Africa",dish:"1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Moyen",checked:"11/09/2026"},
+ {sat:"SES-5",pos:"5°E",band:"Ku",freq:"11904 H 27500",beam:"Africa",dish:"85 cm à 1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"11/09/2026"},
+ {sat:"Eutelsat 36E",pos:"36°E",band:"Ku",freq:"12418 H 27499",beam:"Africa",dish:"85 cm à 1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"11/09/2026"},
+ {sat:"Intelsat 20",pos:"68,5°E",band:"Ku",freq:"12682 V 30000",beam:"Africa / Indian Ocean",dish:"80 cm à 1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"11/09/2026"},
+ {sat:"Eutelsat 3B",pos:"3°E",band:"C",freq:"À confirmer avant pointage",beam:"C-band Global",dish:"1,20 m minimum conseillé",lnb:"C-band — LO 5150",difficulty:"DX",checked:"11/09/2026"}
+];

@@ -37,3 +37,13 @@ Version 7 :
 - information sur la migration 16A -> 16D annoncée pour le 15/09/2026
 - lien direct vers la source technique Eurovision Services
 - champ "dernière vérification"
+
+Version 8 :
+- nouvelle rubrique "Réglage rapide"
+- fréquence de pointage recommandée par satellite
+- bande et faisceau
+- diamètre de parabole conseillé
+- type de LNB et fréquence LO
+- niveau de difficulté
+- date de dernière vérification
+- procédure de réglage en 4 étapes

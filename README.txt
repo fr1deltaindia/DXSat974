@@ -98,3 +98,10 @@ Version 15 :
 - contacts publics vérifiés pour QTV Gambia, SenTV/DMedia, Canal 2 International et 3Ktv
 - bouton email direct par chaîne
 - appel aux diffuseurs pour fournir paramètres officiels, cartes et changements de fréquence
+
+Version 15 corrigée :
+- suppression des adresses e-mail publiques des chaînes
+- suppression des boutons "Écrire à..."
+- conservation des liens vers les sites officiels
+- rubrique Diffuseurs recentrée sur la présentation de DXSat 974
+- seul le contact fr1deltaindia@gmail.com reste affiché publiquement

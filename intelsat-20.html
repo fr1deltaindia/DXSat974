@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Intelsat 20 à 68.5°E — Réception Afrique &amp; Océan Indien</title>
-<meta name="description" content="Guide pratique Intelsat 20 à 68.5°E : fréquences Ku, faisceaux Afrique, essais DX, feeds et carte officielle.">
+<meta name="description" content="Guide pratique Intelsat 20 à 68.5°E : fréquences Ku, faisceaux Afrique, essais DX, mesures SNR/AGC, feeds et carte officielle.">
 <link rel="canonical" href="https://fr1deltaindia.github.io/DXSat974/intelsat-20.html">
-
 <style>
 body{margin:0;background:#07111f;color:#eef5ff;font-family:Arial,system-ui,sans-serif}
-.wrap{width:min(1000px,92%);margin:auto}.hero{padding:46px 0;background:linear-gradient(135deg,#08111f,#0a2743)}
+.wrap{width:min(1100px,92%);margin:auto}.hero{padding:46px 0;background:linear-gradient(135deg,#08111f,#0a2743)}
 a{color:#74d8ff}.back{display:inline-block;margin-bottom:18px;text-decoration:none}.card{background:#0e2033;border:1px solid #203e5a;border-radius:16px;padding:20px;margin:18px 0}
 h1{font-size:clamp(2.2rem,6vw,4rem);margin:.15em 0}.muted{color:#a9b9cc;line-height:1.6}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.item{background:#0a1727;border:1px solid #1d3550;border-radius:12px;padding:14px}
 .btn{display:inline-block;text-decoration:none;border:1px solid #2d5677;color:#dff5ff;background:#0b1d2f;border-radius:10px;padding:10px 12px;font-weight:700}.btn.primary{background:#0f5e86}
+.table-wrap{overflow:auto;border:1px solid #203e5a;border-radius:14px}table{width:100%;border-collapse:collapse;min-width:980px}th,td{padding:11px 10px;text-align:left;border-bottom:1px solid #203e5a;vertical-align:top;font-size:.92rem}th{background:#0a1727;color:#cdefff}.ok{color:#71e58b;font-weight:700}.warn{color:#ffd166;font-weight:700}.no{color:#ff7676;font-weight:700}
+.note{border-left:4px solid #4cc9f0;padding:10px 14px;background:#091828;border-radius:10px;color:#cbd9e8;line-height:1.55}
 @media(max-width:700px){.grid{grid-template-columns:1fr}}
 </style>
-
 </head>
 <body>
 <header class="hero"><div class="wrap">
@@ -30,26 +30,43 @@ h1{font-size:clamp(2.2rem,6vw,4rem);margin:.15em 0}.muted{color:#a9b9cc;line-hei
 <div class="grid">
 <div class="item"><strong>Position</strong><p>68.5°E</p></div>
 <div class="item"><strong>Bande</strong><p>Ku / C</p></div>
-<div class="item"><strong>Fréquence de pointage</strong><p>12682 V 30000</p></div>
+<div class="item"><strong>Fréquence de pointage conseillée</strong><p>12522 V 27500 — relevée à 10,5 dB de SNR</p></div>
 <div class="item"><strong>Parabole conseillée</strong><p>80 cm à 1,20 m selon transpondeur</p></div>
 </div>
 </div>
 <div class="card">
-<h2>Faisceaux utiles</h2>
-<p class="muted">Europe/Africa, South Africa, regional C-band</p>
+<h2>Relevé terrain — La Réunion</h2>
+<p class="note">Mesures effectuées le <strong>12 septembre 2026 vers 06h30 heure locale de La Réunion</strong> avec un <strong>Octagon SF8008 Supreme</strong>. Une chaîne détectée sans image à cette heure n’est pas considérée comme hors service : certains services peuvent être temporaires ou ne pas émettre en continu.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Transpondeur</th><th>SNR / AGC</th><th>Services détectés</th><th>Observation</th></tr></thead>
+<tbody>
+<tr><td><strong>12522 H / 30000</strong></td><td>7,2 dB / 62 %</td><td>Channels TV, Wap TV, TVC News, TVC Nigeria, Efatha TV, Mindset Learn, Amazing Facts TV, services Hope Channel + radios AWR Tanzania, Radio Maranatha, Malawi Adventist Radio, Rádio Novo Tempo, AWR SID Radio</td><td><span class="ok">Multiplex reçu.</span> Amazing Facts : image OK. Radios citées : audio reçu.</td></tr>
+<tr><td><strong>12522 V / 27500</strong></td><td>10,5 dB / 68 %</td><td>Markaz Sahada, Ezekiel, Spare, Emmanuel TV, Angel TV, Daystar, Christ TV NAC, Spare1</td><td><span class="ok">Très bon niveau.</span> Ezekiel, Emmanuel TV, Angel TV, Daystar et Christ TV NAC : image OK. Markaz : radio OK. Spare / Spare1 : pas d’image au relevé.</td></tr>
+<tr><td><strong>12562 H / 30000</strong></td><td>—</td><td>Markaz Radio, Ezekiel TV, Spare, Emmanuel TV, Angel TV, Daystar, Christ TV NAC, Spare1</td><td>Ezekiel, Emmanuel, Angel, Daystar et Christ TV : <span class="ok">image OK</span>. Markaz : audio OK. Spare / Spare1 : pas d’image au relevé.</td></tr>
+<tr><td><strong>12634 V / 16171</strong></td><td>7,2 dB / 51 %</td><td>Khadugahd TV, Radio Services, YTV Botswana, BTV2, France 24, BTV News, BTV1, BTV Mobile</td><td>Radio Services : <span class="ok">audio OK</span>. Les services TV étaient détectés mais sans image à 06h30.</td></tr>
+<tr><td><strong>12657 V / 4883</strong></td><td>8,2 dB / 35 %</td><td>BTV ENC A</td><td><span class="warn">Service détecté, pas d’image au moment du relevé.</span></td></tr>
+<tr><td><strong>12682 H / 30000</strong></td><td>5,8 dB / 49 %</td><td>SMTV, Biafra Radio, GFN Soccer, ViewMedia Promo, MTA 4 Africa, MTA Africa English, MTA Africa Swahili, 2 × Intelsat FUS Test</td><td><span class="ok">Tous les services TV cités donnent une image.</span> Biafra Radio : service détecté mais pas de son au relevé.</td></tr>
+<tr><td><strong>12682 V / 30000</strong></td><td>—</td><td>12682V SID 0x3E7 (SID 999)</td><td><span class="warn">Un service non identifié détecté.</span></td></tr>
+</tbody>
+</table></div>
 </div>
 <div class="card">
-<h2>Intérêt DX</h2>
-<p class="muted">Une des positions les plus intéressantes pour l’Afrique et l’océan Indien.</p>
+<h2>Porteuses non verrouillées lors du même relevé</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Fréquence</th><th>SR</th><th>Résultat à 06h30</th><th>Remarque</th></tr></thead>
+<tbody>
+<tr><td>12639 H</td><td>≈ 7780</td><td class="no">Pas de verrouillage</td><td>À retester à un autre horaire.</td></tr>
+<tr><td>12722 V</td><td>30000</td><td class="no">Pas de verrouillage</td><td>À surveiller.</td></tr>
+<tr><td>12616 H</td><td>≈ 7200</td><td class="no">Non détecté</td><td>Fréquence de feed occasionnel.</td></tr>
+<tr><td>12647 V</td><td>4166</td><td class="no">Non détecté</td><td>BTV DSN avait été reçu antérieurement le 13/08/2026 : activité possiblement occasionnelle.</td></tr>
+<tr><td>12606 H</td><td>7200</td><td class="no">Non détecté</td><td>Fréquence de feed occasionnel.</td></tr>
+</tbody>
+</table></div>
 </div>
-<div class="card">
-<h2>Carte de couverture officielle</h2>
-<p><a class="btn primary" href="https://www.intelsat.com/fleetmaps/" target="_blank" rel="noopener">Voir la carte officielle ↗</a></p>
-</div>
-<div class="card">
-<h2>Dernière mise à jour</h2>
-<p class="muted">11 septembre 2026</p>
-</div>
+<div class="card"><h2>Faisceaux utiles</h2><p class="muted">Europe/Africa, South Africa, ressources C-band régionales.</p></div>
+<div class="card"><h2>Intérêt DX</h2><p class="muted">Une des positions les plus intéressantes pour l’Afrique et l’océan Indien. Les relevés terrain permettent de distinguer les multiplex permanents des porteuses ou feeds intermittents.</p></div>
+<div class="card"><h2>Carte de couverture officielle</h2><p><a class="btn primary" href="https://www.intelsat.com/fleetmaps/" target="_blank" rel="noopener">Voir la carte officielle ↗</a></p></div>
+<div class="card"><h2>Dernière mise à jour</h2><p class="muted">12 septembre 2026</p></div>
 </main>
 </body>
 </html>

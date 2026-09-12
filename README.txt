@@ -147,3 +147,11 @@ Version 21 :
 - détails de réception au clic
 - La Réunion conservée en zoom local
 - carte autonome sans dépendance externe
+
+Version 22 :
+- mise à jour terrain Intelsat 20 à 68,5°E du 12/09/2026
+- relevés Octagon SF8008 Supreme vers 06h30 locale Réunion
+- ajout des SNR/AGC et statuts image/audio sur 12522 H/V, 12562 H, 12634 V, 12657 V, 12682 H/V
+- ajout des fréquences non verrouillées : 12639 H, 12722 V, 12616 H, 12647 V, 12606 H
+- nouvelle fréquence de pointage pratique Intelsat 20 : 12522 V 27500 (10,5 dB SNR mesuré)
+

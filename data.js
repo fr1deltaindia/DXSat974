@@ -9,6 +9,18 @@ const TESTS = [
  {date:"2026-08-13",sat:"Eutelsat 36E",pos:"36°E",beam:"Africa",place:"La Réunion",band:"Ku",freq:"12418 H",sr:"27499",service:"DISH / ODS VOD",dish:"85 cm",measure:"S92 / Q72",status:"Stable"},
  {date:"2026-08-13",sat:"SES-5",pos:"5°E",beam:"Africa",place:"La Réunion",band:"Ku",freq:"11904 H",sr:"27500",service:"BTM TV",dish:"1,20 m",measure:"S80 / Q80",status:"Stable"},
  {date:"2026-08-13",sat:"Intelsat 20",pos:"68,5°E",beam:"Africa / Indian Ocean",place:"La Réunion",band:"Ku",freq:"12647 V",sr:"4166",service:"BTV DSN",dish:"80 cm",measure:"Image OK",status:"Stable"},
+ {date:"2026-09-12",sat:"Intelsat 20",pos:"68,5°E",beam:"Europe/Africa",place:"La Réunion",band:"Ku",freq:"12522 H",sr:"30000",service:"Channels TV, Wap TV, TVC News, TVC Nigeria, Efatha TV, Mindset Learn, Amazing Facts TV, Hope Channel… + radios AWR Tanzania, Radio Maranatha, Malawi Adventist Radio, Rádio Novo Tempo, AWR SID Radio",dish:"Non précisée",measure:"SNR 7,2 dB / AGC 62 % — Amazing Facts image OK",status:"Stable"},
+ {date:"2026-09-12",sat:"Intelsat 20",pos:"68,5°E",beam:"Europe/Africa",place:"La Réunion",band:"Ku",freq:"12522 V",sr:"27500",service:"Markaz Sahada / Ezekiel / Spare / Emmanuel TV / Angel TV / Daystar / Christ TV NAC / Spare1",dish:"Non précisée",measure:"SNR 10,5 dB / AGC 68 % — 5 TV image OK, Markaz radio OK, Spare/Spare1 sans image",status:"Stable"},
+ {date:"2026-09-12",sat:"Intelsat 20",pos:"68,5°E",beam:"Europe/Africa",place:"La Réunion",band:"Ku",freq:"12562 H",sr:"30000",service:"Markaz Radio / Ezekiel TV / Spare / Emmanuel TV / Angel TV / Daystar / Christ TV NAC / Spare1",dish:"Non précisée",measure:"TV principales image OK ; Spare/Spare1 sans image",status:"Stable"},
+ {date:"2026-09-12",sat:"Intelsat 20",pos:"68,5°E",beam:"Europe/Africa",place:"La Réunion",band:"Ku",freq:"12634 V",sr:"16171",service:"Khadugahd TV / Radio Services / YTV Botswana / BTV2 / France 24 / BTV News / BTV1 / BTV Mobile",dish:"Non précisée",measure:"SNR 7,2 dB / AGC 51 % — Radio Services audio OK ; TV sans image à 06h30",status:"Détecté"},
+ {date:"2026-09-12",sat:"Intelsat 20",pos:"68,5°E",beam:"Europe/Africa",place:"La Réunion",band:"Ku",freq:"12657 V",sr:"4883",service:"BTV ENC A",dish:"Non précisée",measure:"SNR 8,2 dB / AGC 35 % — service détecté, pas d’image à 06h30",status:"Détecté"},
+ {date:"2026-09-12",sat:"Intelsat 20",pos:"68,5°E",beam:"Europe/Africa",place:"La Réunion",band:"Ku",freq:"12682 H",sr:"30000",service:"SMTV / Biafra Radio / GFN Soccer / ViewMedia Promo / MTA 4 Africa / MTA Africa English / MTA Africa Swahili / 2× Intelsat FUS Test",dish:"Non précisée",measure:"SNR 5,8 dB / AGC 49 % — TV image OK ; Biafra Radio sans son",status:"Stable"},
+ {date:"2026-09-12",sat:"Intelsat 20",pos:"68,5°E",beam:"Europe/Africa",place:"La Réunion",band:"Ku",freq:"12682 V",sr:"30000",service:"12682V SID 0x3E7 (SID 999) — service non identifié",dish:"Non précisée",measure:"1 service détecté",status:"Détecté"},
+ {date:"2026-09-12",sat:"Intelsat 20",pos:"68,5°E",beam:"Europe/Africa",place:"La Réunion",band:"Ku",freq:"12639 H",sr:"7780",service:"Aucun service verrouillé au relevé",dish:"Non précisée",measure:"Pas de verrouillage à 06h30",status:"Non reçu"},
+ {date:"2026-09-12",sat:"Intelsat 20",pos:"68,5°E",beam:"Europe/Africa",place:"La Réunion",band:"Ku",freq:"12722 V",sr:"30000",service:"Aucun service verrouillé au relevé",dish:"Non précisée",measure:"Pas de verrouillage à 06h30",status:"Non reçu"},
+ {date:"2026-09-12",sat:"Intelsat 20",pos:"68,5°E",beam:"Feeds occasionnels",place:"La Réunion",band:"Ku",freq:"12616 H",sr:"7200",service:"Feed occasionnel — non détecté",dish:"Non précisée",measure:"Non détecté à 06h30",status:"Non reçu"},
+ {date:"2026-09-12",sat:"Intelsat 20",pos:"68,5°E",beam:"Feeds occasionnels",place:"La Réunion",band:"Ku",freq:"12647 V",sr:"4166",service:"BTV DSN / feed occasionnel — non détecté lors du nouveau relevé",dish:"Non précisée",measure:"Non détecté à 06h30 ; réception antérieure confirmée le 13/08",status:"Non reçu"},
+ {date:"2026-09-12",sat:"Intelsat 20",pos:"68,5°E",beam:"Feeds occasionnels",place:"La Réunion",band:"Ku",freq:"12606 H",sr:"7200",service:"Feed occasionnel — non détecté",dish:"Non précisée",measure:"Non détecté à 06h30",status:"Non reçu"},
  {date:"2026-09-11",sat:"Eutelsat 3B",pos:"3°E",beam:"C-band Global",place:"La Réunion",band:"C",freq:"À tester",sr:"-",service:"Faisceau global",dish:"1,00 m",measure:"Projet",status:"À tester"}
 ];
 
@@ -105,7 +117,7 @@ const QUICK_POINTING = [
  {sat:"Eutelsat 7C",pos:"7°E",band:"Ku",freq:"11356 H 34995",beam:"Africa",dish:"1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Moyen",checked:"11/09/2026"},
  {sat:"SES-5",pos:"5°E",band:"Ku",freq:"11904 H 27500",beam:"Africa",dish:"85 cm à 1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"11/09/2026"},
  {sat:"Eutelsat 36E",pos:"36°E",band:"Ku",freq:"12418 H 27499",beam:"Africa",dish:"85 cm à 1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"11/09/2026"},
- {sat:"Intelsat 20",pos:"68,5°E",band:"Ku",freq:"12682 V 30000",beam:"Africa / Indian Ocean",dish:"80 cm à 1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"11/09/2026"},
+ {sat:"Intelsat 20",pos:"68,5°E",band:"Ku",freq:"12522 V 27500",beam:"Europe/Africa",dish:"80 cm à 1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"12/09/2026"},
  {sat:"Eutelsat 3B",pos:"3°E",band:"C",freq:"À confirmer avant pointage",beam:"C-band Global",dish:"1,20 m minimum conseillé",lnb:"C-band — LO 5150",difficulty:"DX",checked:"11/09/2026"}
 ];
 
@@ -133,6 +145,8 @@ const REUNION_MAP_POINTS = [
       {sat:"Eutelsat 36E",pos:"36°E",freq:"12418 H 27499",service:"DISH / ODS VOD",dish:"85 cm",equipment:"GTMEDIA V8 Finder 2",measure:"S92 / Q72",status:"Stable",date:"13/08/2026"},
       {sat:"SES-5",pos:"5°E",freq:"11904 H 27500",service:"BTM TV",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2",measure:"S80 / Q80",status:"Stable",date:"13/08/2026"},
       {sat:"Intelsat 20",pos:"68,5°E",freq:"12647 V 4166",service:"BTV DSN",dish:"80 cm",equipment:"GTMEDIA V8 Finder 2 / Freesat V7",measure:"Image OK",status:"Stable",date:"13/08/2026"},
+      {sat:"Intelsat 20",pos:"68,5°E",freq:"12522 V 27500",service:"Markaz Sahada / Ezekiel / Emmanuel TV / Angel TV / Daystar / Christ TV NAC",dish:"Non précisée",equipment:"Octagon SF8008 Supreme",measure:"SNR 10,5 dB / AGC 68 %",status:"Stable",date:"12/09/2026"},
+      {sat:"Intelsat 20",pos:"68,5°E",freq:"12682 H 30000",service:"SMTV / GFN Soccer / ViewMedia Promo / MTA Africa / Intelsat FUS Test",dish:"Non précisée",equipment:"Octagon SF8008 Supreme",measure:"SNR 5,8 dB / AGC 49 %",status:"Stable",date:"12/09/2026"},
       {sat:"Eutelsat 3B",pos:"3°E",freq:"C-band Global",service:"Essai C-band prévu",dish:"1,00–1,20 m",equipment:"LNBF C-band à installer",measure:"Projet",status:"À tester",date:"11/09/2026"}
     ]
   }

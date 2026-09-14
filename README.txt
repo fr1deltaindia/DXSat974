@@ -155,3 +155,11 @@ Version 22 :
 - ajout des fréquences non verrouillées : 12639 H, 12722 V, 12616 H, 12647 V, 12606 H
 - nouvelle fréquence de pointage pratique Intelsat 20 : 12522 V 27500 (10,5 dB SNR mesuré)
 
+Version 23 :
+- mise à jour terrain Eutelsat 16°E du 14/09/2026
+- parabole offset 1,00 m + Octagon SF8008 Supreme
+- 5 transpondeurs verrouillés : 10846 H, 10887 H, 11513 H, 11554 H, 11637 H / SR 30000
+- mesures SNR/AGC intégrées
+- 194 services détectés lors du blind scan incluant les services cryptés
+- services observés : Canal+ HD, Voir+, Franceinfo et France 24
+- nouvelle fréquence de pointage pratique 16°E : 10887 H 30000 (74 % SNR / 73 % AGC mesurés)

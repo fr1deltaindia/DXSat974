@@ -1,4 +1,5 @@
 const TESTS = [
+ {date:"2026-09-15",sat:"Eutelsat 16°E",pos:"16°E",beam:"Afrique / relevé terrain",place:"La Réunion",band:"Ku",freq:"10804 H",sr:"29950",service:"Quausain, Alu, CRTV, SenTV, CRTV News, Zik FM, RTB TV/Radio, CRTV Sport HD, LM TV, Arewa24, BTV, BB24, France 24 FR, Canal 2 International HD, Impact TV, RFI Afrique, Africa TV3, Malikia TV, Vox Africa, Equinoxe TV…",dish:"1,30 m offset",measure:"SNR 44 % / AGC 93 %",status:"Limite"},
  {date:"2026-08-13",sat:"Eutelsat 16A",pos:"16°E",beam:"Africa",place:"La Réunion",band:"Ku",freq:"10803 H",sr:"30000",service:"Canal 2 International / Africa TV3",dish:"1,20 m",measure:"S93 / Q69",status:"Stable"},
  {date:"2026-08-13",sat:"Eutelsat 16A",pos:"16°E",beam:"Africa",place:"La Réunion",band:"Ku",freq:"12520 H",sr:"30000",service:"AC TV, EP TV, Elohim TV…",dish:"1,20 m",measure:"S91 / Q52",status:"Stable"},
  {date:"2026-08-13",sat:"Eutelsat 16A",pos:"16°E",beam:"Africa",place:"La Réunion",band:"Ku",freq:"12687 H",sr:"29997",service:"QTV Gambia",dish:"1,20 m",measure:"S92 / Q66",status:"Stable"},
@@ -104,6 +105,7 @@ const FTA = [
 ];
 
 const NEWS = [
+ {date:"2026-09-15",type:"Relevé terrain",title:"16°E — nouveau transpondeur reçu avec parabole 1,30 m",text:"Octagon SF8008 Supreme : 10804 H / 29950 verrouillé avec SNR 44 % / AGC 93 %. De nombreux services africains ont été détectés, dont CRTV, SenTV, France 24 FR, Canal 2 International HD, Impact TV, RFI Afrique, Africa TV3, Malikia TV, Vox Africa et Equinoxe TV. Le blind scan 1,30 m détecte désormais 13 porteuses relevées sur 16°E.",source:""},
  {date:"2026-09-14",type:"Relevé terrain",title:"16°E — blind scan avec parabole offset 1 m à La Réunion",text:"Octagon SF8008 Supreme : 5 transpondeurs verrouillés (10846 H, 10887 H, 11513 H, 11554 H, 11637 H — SR 30000). 194 services détectés en incluant les services cryptés. Services observés dans la liste : Canal+ HD, Voir+, Franceinfo et France 24. Meilleur niveau relevé : 10887 H à 74 % SNR / 73 % AGC.",source:""},
  {date:"2026-09-11",type:"Migration programmée",title:"Eutelsat 16A → Eutelsat 16D le 15 septembre",text:"Eurovision Services annonce un transfert des services vers Eutelsat 16D à 16°E le 15 septembre 2026, avec extinction des transpondeurs 16A et activation sur 16D autour de 02:10 UTC.",source:"https://www.eurovisionservices.com/insights/technical/transfer-of-services-from-eutelsat-16a-to-eutelsat-16d"},
  {date:"2026-09-01",type:"Transfert de services",title:"Eutelsat 7B quitte 7°E",text:"Les services commerciaux d’Eutelsat 7B ont été transférés vers Eutelsat 7C. Plusieurs sources spécialisées évoquent alors un repositionnement de 7B vers 16°E.",source:"https://satkurier.pl/news/252588/eutelsat-7b-schodzi-z-7e-mozliwa-relokacja-na-16e.html"},
@@ -119,7 +121,7 @@ const VHF_TESTS = [
 
 
 const QUICK_POINTING = [
- {sat:"Eutelsat 16A / 16D",pos:"16°E",band:"Ku",freq:"10887 H 30000",beam:"Océan Indien / régional — relevé terrain",dish:"1,00 m offset testé",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"14/09/2026"},
+ {sat:"Eutelsat 16A / 16D",pos:"16°E",band:"Ku",freq:"10887 H 30000",beam:"Océan Indien / régional — relevé terrain",dish:"1,00 m offset testé",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"15/09/2026"},
  {sat:"Eutelsat 7C",pos:"7°E",band:"Ku",freq:"11356 H 34995",beam:"Africa",dish:"1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Moyen",checked:"11/09/2026"},
  {sat:"SES-5",pos:"5°E",band:"Ku",freq:"11904 H 27500",beam:"Africa",dish:"85 cm à 1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"11/09/2026"},
  {sat:"Eutelsat 36E",pos:"36°E",band:"Ku",freq:"12418 H 27499",beam:"Africa",dish:"85 cm à 1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"11/09/2026"},
@@ -147,6 +149,7 @@ const REUNION_MAP_POINTS = [
       {sat:"Eutelsat 16A",pos:"16°E",freq:"12728 H 30000",service:"Sen TV, VTV, LM TV…",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2",measure:"S91 / Q52",status:"Stable",date:"13/08/2026"},
       {sat:"Eutelsat 16°E",pos:"16°E",freq:"10887 H 30000",service:"Blind scan — meilleur niveau du relevé",dish:"1,00 m offset",equipment:"Octagon SF8008 Supreme",measure:"SNR 74 % / AGC 73 %",status:"Stable",date:"14/09/2026"},
       {sat:"Eutelsat 16°E",pos:"16°E",freq:"10846 H / 11513 H / 11554 H / 11637 H",service:"Blind scan — 5 TP au total / 194 services avec cryptés",dish:"1,00 m offset",equipment:"Octagon SF8008 Supreme",measure:"SNR 70 % / AGC 62–73 %",status:"Stable",date:"14/09/2026"},
+      {sat:"Eutelsat 16°E",pos:"16°E",freq:"10804 H 29950",service:"Mux africain — nombreux services TV/radio détectés",dish:"1,30 m offset",equipment:"Octagon SF8008 Supreme",measure:"SNR 44 % / AGC 93 %",status:"Limite",date:"15/09/2026"},
       {sat:"Eutelsat 7B/7C",pos:"7°E",freq:"10887 H 30000",service:"JW Broadcasting",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2",measure:"S95 / Q63",status:"Stable",date:"13/08/2026"},
       {sat:"Eutelsat 7B/7C",pos:"7°E",freq:"11356 H 34995",service:"Bouquet Zimbabwe",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2",measure:"S95 / Q63",status:"Stable",date:"13/08/2026"},
       {sat:"Eutelsat 7B/7C",pos:"7°E",freq:"11595 H 30000",service:"Test faisceau South-East Africa",dish:"1,20 m",equipment:"GTMEDIA V8 Finder 2",measure:"S60 / Q0",status:"Non reçu",date:"13/08/2026"},

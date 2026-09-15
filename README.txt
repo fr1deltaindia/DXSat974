@@ -163,3 +163,11 @@ Version 23 :
 - 194 services détectés lors du blind scan incluant les services cryptés
 - services observés : Canal+ HD, Voir+, Franceinfo et France 24
 - nouvelle fréquence de pointage pratique 16°E : 10887 H 30000 (74 % SNR / 73 % AGC mesurés)
+
+Version 24 :
+- mise à jour terrain Eutelsat 16°E du 15/09/2026
+- parabole offset 1,30 m + Octagon SF8008 Supreme
+- 13 porteuses relevées : 10804 H, 10845 H, 10887 H, 10929 H, 11024 H, 11357 H, 11513 H, 11554 H, 11637 H, 12563 H, 12604 H, 12687 H, 12729 H
+- nouveau transpondeur 10804 H / 29950 : SNR 44 % / AGC 93 %
+- ajout de la liste des services détectés sur 10804 H, dont CRTV, SenTV, France 24 FR, Canal 2 International HD, Impact TV, RFI Afrique, Africa TV3, Malikia TV, Vox Africa et Equinoxe TV
+

@@ -171,3 +171,10 @@ Version 24 :
 - nouveau transpondeur 10804 H / 29950 : SNR 44 % / AGC 93 %
 - ajout de la liste des services détectés sur 10804 H, dont CRTV, SenTV, France 24 FR, Canal 2 International HD, Impact TV, RFI Afrique, Africa TV3, Malikia TV, Vox Africa et Equinoxe TV
 
+Version 25 :
+- comparaison terrain Eutelsat 16°E du 17/09/2026
+- parabole offset 1,00 m : 12 transpondeurs reçus
+- parabole offset 1,30 m : 13 transpondeurs reçus
+- 11024 H / 5555 DVB-S QPSK reçu avec la 1,30 m et non observé sur le scan 1 m
+- paramètres FEC / modulation du blind scan 1,30 m ajoutés à la fiche Eutelsat 16°E
+- correction des anciennes valeurs approximatives par les valeurs photographiées du blind scan

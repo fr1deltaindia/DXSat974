@@ -178,3 +178,12 @@ Version 25 :
 - 11024 H / 5555 DVB-S QPSK reçu avec la 1,30 m et non observé sur le scan 1 m
 - paramètres FEC / modulation du blind scan 1,30 m ajoutés à la fiche Eutelsat 16°E
 - correction des anciennes valeurs approximatives par les valeurs photographiées du blind scan
+
+
+Version 26 :
+- ajout de la fiche RASCOM-QAF1R à 2,9°E
+- réception Ku South confirmée à La Réunion le 17/09/2026
+- 11231 H / 40000 selon relevé terrain Octagon ; référence publique 11230 V / 40000 DVB-S2 QPSK 3/4
+- 26 services enregistrés en scan manuel, dont RTNC 1, RTNC 3, TVS1, France 24, Afrique Média, PSTV, CUTV et RealTime
+- note technique : le blind scan détecte la porteuse mais ne liste pas les services ; la recherche manuelle fonctionne
+- ajout RASCOM dans les fiches satellites, réglage rapide, FTA, carte Réunion et dernières mises à jour

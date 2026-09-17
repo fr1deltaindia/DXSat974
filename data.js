@@ -1,5 +1,5 @@
 const TESTS = [
- {date:"2026-09-17",sat:"RASCOM-QAF1R",pos:"2,9°E",beam:"Ku South",place:"La Réunion",band:"Ku",freq:"11231 H",sr:"40000",service:"26 services reçus : RLPRO, Face TV, Times TV, Shalom Television, DBTV, RTNC 1, RTNC 3, TVS1, France 24, AfriqueMedia1, Info TV, CAM10 Television, Dash TV, Power TV, NTV, Bnews, PRO-TV, PSTV, RealTime, CUTV, Kalemie Frycoms TV, SudFM TV, Resurrection TV, Actualité en continu, Elan-TV, LifeHD-TV",dish:"Non précisée",measure:"Réception confirmée en scan manuel Octagon ; blind/auto ne listent pas les services. Paramètre terrain : 11231 H / 40000. Référence publique : 11230 V / 40000 DVB-S2 QPSK 3/4.",status:"Stable"},
+ {date:"2026-09-17",sat:"RASCOM-QAF1R",pos:"2,9°E",beam:"Ku South",place:"La Réunion",band:"Ku",freq:"11231 H",sr:"40000",service:"26 services reçus ; 9 sans image au moment du test : RLPRO, Shalom Television, RTNC 3, PRO-TV, CUTV, SudFM TV, Resurrection TV, Elan TV, LiveHD TV",dish:"85 cm offset",measure:"Octagon : SNR 35 % / AGC 79 %. Blind/auto détectent le TP mais ne listent pas les services ; scan manuel = 26 services. Réception également confirmée avec le V5.",status:"Stable"},
  {date:"2026-09-17",sat:"Eutelsat 16°E",pos:"16°E",beam:"Comparatif terrain",place:"La Réunion",band:"Ku",freq:"Blind scan 1,00 m",sr:"-",service:"12 transpondeurs reçus",dish:"1,00 m offset",measure:"12 TP : 10804, 10846, 10887, 10929, 11513, 11554, 11638, 12521, 12563, 12605, 12687, 12729 H",status:"Stable"},
  {date:"2026-09-17",sat:"Eutelsat 16°E",pos:"16°E",beam:"Comparatif terrain",place:"La Réunion",band:"Ku",freq:"Blind scan 1,30 m",sr:"-",service:"13 transpondeurs reçus",dish:"1,30 m offset",measure:"13 TP ; 11024 H / 5555 reçu en plus",status:"Stable"},
  {date:"2026-09-17",sat:"Eutelsat 16°E",pos:"16°E",beam:"Comparatif terrain",place:"La Réunion",band:"Ku",freq:"11024 H",sr:"5555",service:"Porteuse faible / faible SR — reçue avec 1,30 m",dish:"1,30 m offset",measure:"DVB-S QPSK / FEC Auto",status:"Détecté"},
@@ -67,7 +67,7 @@ const SATELLITES = [
    bands:["C","Ku"],
    beams:["Ku North","Ku South","C-band Standard","Insat-C"],
    zones:["Afrique","Afrique centrale","Afrique australe","Océan Indien en bordure selon faisceau"],
-   dx:"Réception terrain confirmée à La Réunion sur le faisceau Ku South. Le 17/09/2026, un scan manuel Octagon a trouvé 26 services sur 11231 H / 40000. Les listes publiques récentes donnent le même multiplex autour de 11230 V / 40000 DVB-S2 QPSK 3/4 ; la polarisation terrain est conservée telle qu'affichée par le récepteur.",
+   dx:"Réception terrain confirmée à La Réunion sur le faisceau Ku South avec une parabole offset de 85 cm. Le 17/09/2026, un scan manuel Octagon a trouvé 26 services sur 11231 H / 40000 (SNR 35 % / AGC 79 %), et le V5 a également confirmé la réception. Les listes publiques récentes donnent le même multiplex autour de 11230 V / 40000 DVB-S2 QPSK 3/4 ; la polarisation terrain est conservée telle qu'affichée par le récepteur.",
    officialMap:"https://rascomstar.com/",
    officialPdf:""
  },
@@ -120,7 +120,7 @@ const FTA = [
 ];
 
 const NEWS = [
- {date:"2026-09-17",type:"Nouvelle réception DX",title:"RASCOM-QAF1R 2,9°E reçu à La Réunion",text:"Réception confirmée en scan manuel sur 11231 / 40000 avec 26 services, dont RTNC 1, RTNC 3, TVS1, France 24, Afrique Média, PSTV, CUTV, RealTime et Actualité en continu. Le blind scan détecte la porteuse mais ne liste pas les services ; le scan manuel les trouve. Les listes publiques récentes placent le mux Ku South autour de 11230 V / 40000 DVB-S2 QPSK 3/4.",source:"https://rascomstar.com/"},
+ {date:"2026-09-17",type:"Nouvelle réception DX",title:"RASCOM-QAF1R 2,9°E reçu à La Réunion avec 85 cm",text:"Réception confirmée sur 11231 / 40000 avec une parabole offset de 85 cm. Octagon : SNR 35 % / AGC 79 % et 26 services en scan manuel ; blind scan et scan automatique détectent le transpondeur mais ne listent pas les chaînes. Le V5 confirme également le bouquet. Neuf services étaient détectés/verrouillés mais sans image au moment du relevé.",source:"https://rascomstar.com/"},
  {date:"2026-09-17",type:"Comparatif terrain",title:"16°E — 1 m contre 1,30 m à La Réunion",text:"Deux blind scans rapprochés avec l’Octagon SF8008 Supreme donnent 12 transpondeurs avec l’offset 1,00 m et 13 avec la 1,30 m. La différence observée est 11024 H / 5555 DVB-S QPSK, verrouillé avec la 1,30 m. Les écarts de ±1 MHz sur d’autres porteuses sont traités comme variations normales du blind scan.",source:""},
  {date:"2026-09-15",type:"Relevé terrain",title:"16°E — nouveau transpondeur reçu avec parabole 1,30 m",text:"Octagon SF8008 Supreme : 10804 H / 29950 verrouillé avec SNR 44 % / AGC 93 %. De nombreux services africains ont été détectés, dont CRTV, SenTV, France 24 FR, Canal 2 International HD, Impact TV, RFI Afrique, Africa TV3, Malikia TV, Vox Africa et Equinoxe TV. Le blind scan 1,30 m détecte désormais 13 porteuses relevées sur 16°E.",source:""},
  {date:"2026-09-14",type:"Relevé terrain",title:"16°E — blind scan avec parabole offset 1 m à La Réunion",text:"Octagon SF8008 Supreme : 5 transpondeurs verrouillés (10846 H, 10887 H, 11513 H, 11554 H, 11637 H — SR 30000). 194 services détectés en incluant les services cryptés. Services observés dans la liste : Canal+ HD, Voir+, Franceinfo et France 24. Meilleur niveau relevé : 10887 H à 74 % SNR / 73 % AGC.",source:""},
@@ -138,7 +138,7 @@ const VHF_TESTS = [
 
 
 const QUICK_POINTING = [
- {sat:"RASCOM-QAF1R",pos:"2,9°E",band:"Ku",freq:"11231 H 40000 (terrain)",beam:"Ku South — public : 11230 V 40000",dish:"Réception DX confirmée à La Réunion",lnb:"Ku universel — LO 9750/10600",difficulty:"DX",checked:"17/09/2026"},
+ {sat:"RASCOM-QAF1R",pos:"2,9°E",band:"Ku",freq:"11231 H 40000 (terrain)",beam:"Ku South — public : 11230 V 40000",dish:"85 cm offset — réception confirmée",lnb:"Ku universel — LO 9750/10600",difficulty:"DX",checked:"17/09/2026"},
  {sat:"Eutelsat 16A / 16D",pos:"16°E",band:"Ku",freq:"10887 H 30000",beam:"Afrique / Océan Indien — relevé terrain",dish:"1,00 m reçue ; 1,30 m apporte plus de marge",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"17/09/2026"},
  {sat:"Eutelsat 7C",pos:"7°E",band:"Ku",freq:"11356 H 34995",beam:"Africa",dish:"1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Moyen",checked:"11/09/2026"},
  {sat:"SES-5",pos:"5°E",band:"Ku",freq:"11904 H 27500",beam:"Africa",dish:"85 cm à 1,20 m",lnb:"Ku universel — LO 9750/10600",difficulty:"Facile",checked:"11/09/2026"},
@@ -178,7 +178,7 @@ const REUNION_MAP_POINTS = [
       {sat:"Intelsat 20",pos:"68,5°E",freq:"12647 V 4166",service:"BTV DSN",dish:"80 cm",equipment:"GTMEDIA V8 Finder 2 / Freesat V7",measure:"Image OK",status:"Stable",date:"13/08/2026"},
       {sat:"Intelsat 20",pos:"68,5°E",freq:"12522 V 27500",service:"Markaz Sahada / Ezekiel / Emmanuel TV / Angel TV / Daystar / Christ TV NAC",dish:"Non précisée",equipment:"Octagon SF8008 Supreme",measure:"SNR 10,5 dB / AGC 68 %",status:"Stable",date:"12/09/2026"},
       {sat:"Intelsat 20",pos:"68,5°E",freq:"12682 H 30000",service:"SMTV / GFN Soccer / ViewMedia Promo / MTA Africa / Intelsat FUS Test",dish:"Non précisée",equipment:"Octagon SF8008 Supreme",measure:"SNR 5,8 dB / AGC 49 %",status:"Stable",date:"12/09/2026"},
-      {sat:"RASCOM-QAF1R",pos:"2,9°E",freq:"11231 H 40000",service:"26 services reçus — RTNC, TVS1, France 24, Afrique Média, PSTV, CUTV, RealTime…",dish:"Non précisée",equipment:"Octagon SF8008 Supreme / GTMedia V8 Finder",measure:"Réception confirmée en scan manuel",status:"Stable",date:"17/09/2026"},
+      {sat:"RASCOM-QAF1R",pos:"2,9°E",freq:"11231 H 40000",service:"26 services reçus — 9 sans image au moment du test",dish:"85 cm offset",equipment:"Octagon SF8008 Supreme / V5",measure:"SNR 35 % / AGC 79 % — scan manuel Octagon ; réception confirmée V5",status:"Stable",date:"17/09/2026"},
       {sat:"Eutelsat 3B",pos:"3°E",freq:"C-band Global",service:"Essai C-band prévu",dish:"1,00–1,20 m",equipment:"LNBF C-band à installer",measure:"Projet",status:"À tester",date:"11/09/2026"}
     ]
   }

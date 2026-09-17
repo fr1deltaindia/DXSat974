@@ -187,3 +187,12 @@ Version 26 :
 - 26 services enregistrés en scan manuel, dont RTNC 1, RTNC 3, TVS1, France 24, Afrique Média, PSTV, CUTV et RealTime
 - note technique : le blind scan détecte la porteuse mais ne liste pas les services ; la recherche manuelle fonctionne
 - ajout RASCOM dans les fiches satellites, réglage rapide, FTA, carte Réunion et dernières mises à jour
+
+
+Version 27 :
+- RASCOM-QAF1R 2,9°E : précision de la parabole utilisée, offset 85 cm
+- Octagon SF8008 Supreme sur 11231 H / 40000 : SNR 35 % / AGC 79 %
+- 26 services trouvés en scan manuel ; blind scan et scan automatique détectent le TP mais ne listent pas les services
+- réception du bouquet également confirmée lors des derniers essais avec le récepteur V5
+- 9 services détectés/verrouillés mais sans image au moment du test : RLPRO, Shalom Television, RTNC 3, PRO-TV, CUTV, SudFM TV, Resurrection TV, Elan TV, LiveHD TV
+- statuts présentés comme observations au moment du relevé, sans conclure à une panne permanente

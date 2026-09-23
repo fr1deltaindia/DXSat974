@@ -1,0 +1,15 @@
+DXSat974 v29.1 — sources visuelles RASCOM
+
+VERIFIE / UTILISE EN DIRECT DANS LA PAGE
+- RTNC 1: https://rtnc.cd/wp-content/uploads/2025/03/logo-rtnc1.webp (site officiel RTNC)
+- CAM10: https://pbs.twimg.com/profile_images/1470776349396721667/4ZXn-JpL_400x400.jpg (compte officiel CAM10 Télévision)
+- France 24: fichier d'affichage https://www.marefa.org/w/images/thumb/6/65/FRANCE_24_logo.svg/1200px-FRANCE_24_logo.svg.png ; identité vérifiée par le kit presse France 24.
+
+PLACEHOLDERS — LOGO OFFICIEL A VERIFIER
+- Afrique Media 1
+- Dash TV
+- Info TV Cameroun
+- Neotempra TV / NTV
+- RealTime TV
+
+Règle DXSat974 : ne pas présenter un logo comme officiel sans source suffisamment fiable.

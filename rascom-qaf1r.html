@@ -13,6 +13,7 @@ a{color:#74d8ff}.back{display:inline-block;margin-bottom:18px;text-decoration:no
 h1{font-size:clamp(2.2rem,6vw,4rem);margin:.15em 0}.muted{color:#a9b9cc;line-height:1.6}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.item{background:#0a1727;border:1px solid #1d3550;border-radius:12px;padding:14px}
 .btn{display:inline-block;text-decoration:none;border:1px solid #2d5677;color:#dff5ff;background:#0b1d2f;border-radius:10px;padding:10px 12px;font-weight:700}.btn.primary{background:#0f5e86}
 ul.services{columns:2;column-gap:32px;line-height:1.75}.note{border-left:4px solid #4cc9f0;padding-left:14px}.logo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.logo-card{background:#081420;border:1px solid #1d3550;border-radius:14px;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,.15)}.logo-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#0d1b2a}.logo-card .meta{padding:14px}.logo-card h3{margin:.2em 0;font-size:1.05rem}.pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#10324b;border:1px solid #28597a;color:#dff5ff;font-size:.78rem;font-weight:700;margin:.15rem .2rem .15rem 0}.legend{font-size:.95rem;color:#bfd0de;line-height:1.55}.small{font-size:.92rem;color:#bdd1e2}.inline-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#091623;border:1px solid #20364c;border-radius:8px;padding:2px 7px}
+.tv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.tv-card{background:#081420;border:1px solid #1d3550;border-radius:14px;overflow:hidden}.tv-logo{height:135px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0b2034,#123d56);position:relative;font-size:2rem;font-weight:800;letter-spacing:.06em;color:#dff5ff}.tv-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;padding:12px;box-sizing:border-box}.tv-meta{padding:14px}.tv-meta h3{margin:.1rem 0 .3rem}.tv-meta p{margin:.2rem 0 .7rem;color:#b8cad9}.tv-meta small{display:block;margin-top:.55rem;color:#89a7ba}.tag{display:inline-block;padding:4px 8px;border-radius:999px;background:#10324b;border:1px solid #28597a;color:#dff5ff;font-size:.76rem;font-weight:700;margin:.15rem .2rem .15rem 0}.tag.ok{background:#123d32;border-color:#2d7e65}.tag.bad{background:#4a2830;border-color:#8d4b5c}
 @media(max-width:700px){.grid{grid-template-columns:1fr}ul.services{columns:1}}
 </style>
 </head>
@@ -44,23 +45,113 @@ ul.services{columns:2;column-gap:32px;line-height:1.75}.note{border-left:4px sol
 <p class="muted"><strong>Particularité Octagon :</strong> la porteuse 11231 / 40000 est bien détectée en blind scan, mais la liste des chaînes n'est obtenue qu'en recherche manuelle. Le V5 permet également de confirmer la présence du bouquet.</p>
 </div>
 <div class="card">
-<h2>Chaînes mises en avant — galerie logo v29</h2>
-<p class="muted">Version corrigée v29.1 : <strong>RTNC 1</strong>, <strong>France 24</strong> et <strong>CAM10</strong> utilisent des visuels provenant de sources vérifiées. Pour Afrique Media 1, Dash TV, Info TV, Neotempra TV et RealTime TV, DXSat974 affiche volontairement un <strong>placeholder “logo officiel à vérifier”</strong> plutôt que d'utiliser un visuel potentiellement erroné.</p>
-<div class="logo-grid">
-  <article class="logo-card"><img src="https://rtnc.cd/wp-content/uploads/2025/03/logo-rtnc1.webp" alt="Logo RTNC 1"><div class="meta"><h3>RTNC 1</h3><div class="small">République démocratique du Congo</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
-  <article class="logo-card"><img src="https://www.marefa.org/w/images/thumb/6/65/FRANCE_24_logo.svg/1200px-FRANCE_24_logo.svg.png" alt="Logo France 24"><div class="meta"><h3>France 24</h3><div class="small">Chaîne d’information internationale</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
-  <article class="logo-card"><img src="images/channels/rascom/afriquemedia1.png" alt="Logo Afrique Media 1"><div class="meta"><h3>Afrique Media 1</h3><div class="small">Logo officiel à vérifier · chaîne panafricaine</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
-  <article class="logo-card"><img src="https://pbs.twimg.com/profile_images/1470776349396721667/4ZXn-JpL_400x400.jpg" alt="Logo CAM10"><div class="meta"><h3>CAM10 Télévision</h3><div class="small">Cameroun</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
-  <article class="logo-card"><img src="images/channels/rascom/dashtv.png" alt="Logo Dash TV"><div class="meta"><h3>Dash TV</h3><div class="small">Logo officiel à vérifier · Cameroun</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
-  <article class="logo-card"><img src="images/channels/rascom/infotv.png" alt="Logo Info TV"><div class="meta"><h3>Info TV</h3><div class="small">Logo officiel à vérifier · Cameroun</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
-  <article class="logo-card"><img src="images/channels/rascom/neotempra-tv.png" alt="Logo Neotempra TV"><div class="meta"><h3>Neotempra TV / NTV</h3><div class="small">Logo officiel à vérifier · Cameroun</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
-  <article class="logo-card"><img src="images/channels/rascom/realtime.png" alt="Visuel temporaire RealTime TV"><div class="meta"><h3>RealTime TV</h3><div class="small">Visuel temporaire en attendant un logo officiel vérifié</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
-</div>
-<p class="legend"><strong>Organisation retenue pour DXSat974 :</strong> une première galerie de chaînes mises en avant avec visuels, puis la liste complète des services trouvés sur le transpondeur. Cette structure permet d’ajouter progressivement d’autres logos sans perdre la vision globale du multiplex.</p>
-</div>
-<div class="card">
-<h2>Sources des visuels v29.1</h2>
-<p class="muted"><strong>RTNC 1 :</strong> image servie par le site officiel rtnc.cd. <strong>CAM10 :</strong> identité visuelle du compte officiel CAM10 Télévision. <strong>France 24 :</strong> identité visuelle concordante avec le kit presse officiel France 24 ; fichier d'affichage hébergé par une source documentaire externe. Les autres chaînes restent en attente d'un fichier logo officiellement attribuable.</p>
+<h2>Les 26 services reçus — galerie v30</h2>
+<p class="muted">DXSat974 affiche les logos LyngSat lorsqu’un visuel correspondant est disponible. Si l’image distante n’est pas disponible ou si aucun logo fiable n’est référencé, la carte affiche automatiquement les initiales de la chaîne. Les statuts ci-dessous correspondent au relevé terrain du 17/09/2026.</p>
+<div class="tv-grid"><article class="tv-card">
+<div class="tv-logo"><span>RLP</span><img src="https://www.lyngsat.com/logo/tv/rr/rlpro-tv-cd.png" alt="Logo RLPRO" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>RLPRO</h3><p>RDC</p><div><span class="tag">11231 H / 40000</span><span class="tag bad">Pas d’image au relevé</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>FACE</span><img src="https://www.lyngsat.com/logo/tv/ff/face-tv-cd.png" alt="Logo FACE_TV" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>FACE_TV</h3><p>RDC</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>TIMES</span><img src="https://www.lyngsat.com/logo/tv/tt/times-tv-cm.png" alt="Logo TIMES TV" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>TIMES TV</h3><p>Cameroun</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>STV</span></div>
+<div class="tv-meta"><h3>SHALOM TELEVISION</h3><p>À confirmer</p><div><span class="tag">11231 H / 40000</span><span class="tag bad">Pas d’image au relevé</span></div><small>Logo : Aucun logo LyngSat confirmé</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>DBTV</span></div>
+<div class="tv-meta"><h3>DBTV</h3><p>À confirmer</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : Aucun logo LyngSat confirmé</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>RTNC</span><img src="https://www.lyngsat.com/logo/tv/rr/rtnc-cd.png" alt="Logo RTNC 1" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>RTNC 1</h3><p>RDC</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>RTNC3</span><img src="https://www.lyngsat.com/logo/tv/rr/rtnc-3-cd.png" alt="Logo RTNC 3" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>RTNC 3</h3><p>RDC</p><div><span class="tag">11231 H / 40000</span><span class="tag bad">Pas d’image au relevé</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>TVS1</span><img src="https://www.lyngsat.com/logo/tv/rr/rtvs-1-cd.png" alt="Logo TVS1" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>TVS1</h3><p>RDC</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat · correspondance RTVS 1</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>F24</span><img src="https://www.lyngsat.com/logo/tv/ff/france-24-francais-fr.png" alt="Logo FRANCE24" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>FRANCE24</h3><p>France</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>AM1</span><img src="https://www.lyngsat.com/logo/tv/aa/afrique-media-cm.png" alt="Logo AFRIQUEMEDIA1" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>AFRIQUEMEDIA1</h3><p>Cameroun / panafricain</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>INFO</span><img src="https://www.lyngsat.com/logo/tv/ii/infotv-cm.png" alt="Logo INFO TV" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>INFO TV</h3><p>Cameroun</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>CAM10</span><img src="https://www.lyngsat.com/logo/tv/cc/cam-10-cm.png" alt="Logo CAM10_TELEVISION" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>CAM10_TELEVISION</h3><p>Cameroun</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>DASH</span><img src="https://www.lyngsat.com/logo/tv/dd/dash-tv-cm.png" alt="Logo DASH TV" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>DASH TV</h3><p>Cameroun</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>POWER</span><img src="https://www.lyngsat.com/logo/tv/pp/power-tv-bj.png" alt="Logo POWER_TV" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>POWER_TV</h3><p>Bénin</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>NTV</span><img src="https://www.lyngsat.com/logo/tv/nn/neotempra-tv-cm.png" alt="Logo NTV" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>NTV</h3><p>Cameroun</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat · Néotempra TV</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>BNEWS</span><img src="https://www.lyngsat.com/logo/tv/bb/bnews-1-cm.png" alt="Logo Bnews" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>Bnews</h3><p>Cameroun</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>PRO</span></div>
+<div class="tv-meta"><h3>PRO-TV</h3><p>À confirmer</p><div><span class="tag">11231 H / 40000</span><span class="tag bad">Pas d’image au relevé</span></div><small>Logo : Aucun logo LyngSat confirmé</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>PSTV</span><img src="https://www.lyngsat.com/logo/tv/pp/pstv-hd-cd.png" alt="Logo PSTV" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>PSTV</h3><p>RDC</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>RT</span></div>
+<div class="tv-meta"><h3>RealTime</h3><p>RDC / à confirmer</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat ne fournit pas de logo sur le mux actuel</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>CUTV</span></div>
+<div class="tv-meta"><h3>CUTV</h3><p>À confirmer</p><div><span class="tag">11231 H / 40000</span><span class="tag bad">Pas d’image au relevé</span></div><small>Logo : Aucun logo LyngSat confirmé</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>FRY</span><img src="https://www.lyngsat.com/logo/tv/ff/frycoms-tv-cd.png" alt="Logo KALEMIE FRYCOMS TV" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>KALEMIE FRYCOMS TV</h3><p>RDC</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : LyngSat · FryComs TV</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>SUDFM</span><img src="https://www.lyngsat.com/logo/tv/ss/sud-fm-tv-cm.png" alt="Logo SUDFMTV" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>SUDFMTV</h3><p>Cameroun</p><div><span class="tag">11231 H / 40000</span><span class="tag bad">Pas d’image au relevé</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>RES</span><img src="https://www.lyngsat.com/logo/tv/rr/resurrection-tv-cm.png" alt="Logo RESURRECTION_TV" loading="lazy" onerror="this.style.display='none'"></div>
+<div class="tv-meta"><h3>RESURRECTION_TV</h3><p>Cameroun</p><div><span class="tag">11231 H / 40000</span><span class="tag bad">Pas d’image au relevé</span></div><small>Logo : LyngSat</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>ACTU</span></div>
+<div class="tv-meta"><h3>ACTUALITE_EN_CONT</h3><p>À confirmer</p><div><span class="tag">11231 H / 40000</span><span class="tag ok">Image OK</span></div><small>Logo : Aucun logo LyngSat confirmé</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>ELAN</span></div>
+<div class="tv-meta"><h3>ELAN-TV</h3><p>À confirmer</p><div><span class="tag">11231 H / 40000</span><span class="tag bad">Pas d’image au relevé</span></div><small>Logo : Aucun logo LyngSat confirmé</small></div>
+</article>
+<article class="tv-card">
+<div class="tv-logo"><span>LIFE</span></div>
+<div class="tv-meta"><h3>LIFEHD-TV</h3><p>À confirmer</p><div><span class="tag">11231 H / 40000</span><span class="tag bad">Pas d’image au relevé</span></div><small>Logo : Aucun logo LyngSat confirmé</small></div>
+</article></div>
+<p class="legend"><strong>Important :</strong> les logos restent la propriété de leurs chaînes respectives. DXSat974 les utilise uniquement comme repères d’identification. La liste des 26 services provient du scan terrain réalisé à La Réunion ; elle peut donc différer de la liste LyngSat actuelle.</p>
 </div>
 <div class="card">
 <h2>Ce que disent les sources publiques</h2>
@@ -71,7 +162,7 @@ ul.services{columns:2;column-gap:32px;line-height:1.75}.note{border-left:4px sol
 <h2>Autre multiplex Ku à tester</h2>
 <p class="muted"><strong>11430 H / 18330 — DVB-S2 8PSK 3/4 — faisceau Ku North</strong>. Des services FTA y sont référencés publiquement, mais ce faisceau est probablement beaucoup moins favorable depuis La Réunion.</p>
 </div>
-<div class="card"><h2>Dernière mise à jour</h2><p class="muted">23 septembre 2026 — v29.1 (logos vérifiés / placeholders clairement identifiés)</p></div>
+<div class="card"><h2>Dernière mise à jour</h2><p class="muted">23 septembre 2026 — v30 (26 cartes chaînes + logos LyngSat quand disponibles)</p></div>
 </main>
 </body>
 </html>

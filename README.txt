@@ -1,3 +1,14 @@
+DXSat974 v28 — Tableau de bord DX, recherche, comparateur de paraboles et historique des scans
+
+Nouveautés v28 :
+- tableau de bord des 5 satellites actuellement confirmés depuis La Réunion ;
+- recherche locale par satellite, chaîne et fréquence ;
+- comparateur 85 cm / 1,00 m / 1,20 m / 1,30 m ;
+- historique des blind scans et relevés terrain ;
+- bloc Indian Ocean DX Network pour les contributions de Maurice, Madagascar, Mayotte et Seychelles ;
+- enquête locale sur les diamètres de paraboles ;
+- badges de fraîcheur et accès direct depuis la navigation.
+
 DXSat 974 — Version 4
 
 Orientation :

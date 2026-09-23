@@ -44,6 +44,10 @@
   <nav class="nav">
     <div class="wrap navlinks">
       <a href="#accueil">Accueil</a>
+      <a href="#dashboard-dx">Tableau DX</a>
+      <a href="#recherche-dx">Recherche</a>
+      <a href="#comparateur-paraboles">Comparateur</a>
+      <a href="#historique-scans">Historique scans</a>
       <a href="updates.html">Dernières mises à jour</a>
       <a href="#pointage-rapide">Réglage rapide</a>
       <a href="#carte-regionale">Carte régionale</a>
@@ -107,6 +111,68 @@
 
 
 
+
+
+<section id="dashboard-dx" class="dx-dashboard-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Réceptions confirmées à La Réunion</p>
+        <h2>Tableau de bord DX</h2>
+      </div>
+      <span class="freshness-badge">Mis à jour : 23/09/2026</span>
+    </div>
+    <p class="section-intro">Les positions ci-dessous correspondent à des réceptions réellement observées depuis la station de référence DXSat 974. Les diamètres indiqués sont ceux effectivement utilisés lors des essais, pas des minima théoriques.</p>
+    <div class="dx-sat-grid" id="confirmedSatelliteGrid"></div>
+  </div>
+</section>
+
+<section id="recherche-dx" class="search-dx-section">
+  <div class="wrap">
+    <div class="section-head"><div><p class="eyebrow">Base DXSat 974</p><h2>Rechercher une chaîne, un satellite ou une fréquence</h2></div></div>
+    <div class="dx-search-box">
+      <label for="dxSearch">Recherche</label>
+      <div class="dx-search-row">
+        <input id="dxSearch" type="search" placeholder="Ex. RTNC, France 24, 11231, RASCOM, 68.5E…" autocomplete="off">
+        <button id="dxSearchClear" type="button" class="btn">Effacer</button>
+      </div>
+      <p class="muted">La recherche porte sur les satellites confirmés, les fréquences de pointage, les scans terrain et une sélection de services FTA documentés.</p>
+    </div>
+    <div id="dxSearchResults" class="dx-search-results" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="comparateur-paraboles" class="dish-compare-section">
+  <div class="wrap">
+    <div class="section-head"><div><p class="eyebrow">Mesures terrain</p><h2>Comparer les diamètres de parabole</h2></div></div>
+    <p class="section-intro">Lecture rapide des résultats réellement obtenus. <strong>Stable</strong> = réception régulière lors du relevé ; <strong>Limite</strong> = marge faible ; <strong>Non testé</strong> = aucune mesure DXSat 974 pour cette combinaison.</p>
+    <div class="table-wrap">
+      <table class="dish-table">
+        <thead><tr><th>Satellite</th><th>85 cm</th><th>1,00 m</th><th>1,20 m</th><th>1,30 m</th><th>Observation</th></tr></thead>
+        <tbody id="dishComparisonBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="historique-scans" class="scan-history-section">
+  <div class="wrap">
+    <div class="section-head"><div><p class="eyebrow">Journal de terrain</p><h2>Historique des blind scans</h2></div></div>
+    <p class="section-intro">Cette chronologie permet de comparer les récepteurs, les diamètres et l'évolution du nombre de transpondeurs sans confondre une variation de blind scan avec un nouveau signal.</p>
+    <div class="scan-timeline" id="scanHistory"></div>
+  </div>
+</section>
+
+<section id="indian-ocean-network" class="network-section">
+  <div class="wrap network-card">
+    <div>
+      <p class="eyebrow">Indian Ocean DX Network</p>
+      <h2>Étendre les relevés à Maurice, Madagascar, Mayotte et Seychelles</h2>
+      <p>DXSat 974 recherche des rapports de réception avec lieu approximatif, satellite, fréquence, diamètre de parabole, récepteur, SNR/qualité et date. Les relevés validés pourront être comparés à ceux de La Réunion.</p>
+    </div>
+    <a class="btn primary" href="#contribuer">Envoyer un relevé</a>
+  </div>
+</section>
 
 <section id="carte-regionale" class="regional-map-section">
   <div class="section-head"><div><p class="eyebrow">Carte régionale interactive</p><h2>Afrique & océan Indien — essais de réception</h2></div></div>
@@ -650,6 +716,16 @@ Lien photo éventuel :</pre>
 </section>
 
   
+
+<section id="enquete-paraboles" class="dish-survey-section">
+  <p class="eyebrow">Enquête locale</p>
+  <h2>Quel diamètre utilisez-vous à La Réunion ?</h2>
+  <div class="card">
+    <p>DXSat 974 souhaite documenter les diamètres réellement utilisés localement : 60–65 cm, 75–85 cm, 90 cm–1 m, 1,20–1,30 m, 1,50 m et plus.</p>
+    <a class="btn primary" href="mailto:fr1deltaindia@gmail.com?subject=Enqu%C3%AAte%20parabole%20DXSat974&body=Commune%20%3A%0ADiam%C3%A8tre%20de%20parabole%20%3A%0ASatellite(s)%20re%C3%A7u(s)%20%3A%0AR%C3%A9cepteur%20%3A%0ACommentaire%20%3A">Participer à l’enquête</a>
+  </div>
+</section>
+
 <section id="pages-satellites">
   <p class="eyebrow">Guides détaillés</p>
   <h2>Pages satellites</h2>

@@ -183,3 +183,44 @@ const REUNION_MAP_POINTS = [
     ]
   }
 ];
+
+
+// --- DXSat 974 v28 : tableau de bord / comparateur / historique ---
+const CONFIRMED_SATELLITES = [
+  {name:"RASCOM-QAF1R",pos:"2,9°E",dish:"85 cm",freq:"11231 H 40000",tp:"1 mux confirmé",status:"DX confirmé",date:"17/09/2026",page:"rascom-qaf1r.html",note:"26 services trouvés en scan manuel Octagon ; SNR 35 % / AGC 79 %."},
+  {name:"SES-5",pos:"5°E",dish:"85 cm à 1,20 m",freq:"11904 H 27500",tp:"plusieurs TP",status:"Reçu",date:"13/08/2026",page:"ses-5.html",note:"Position de référence pour les faisceaux africains."},
+  {name:"Eutelsat 16",pos:"16°E",dish:"1,00 m / 1,30 m",freq:"10887 H 30000",tp:"12 à 13 TP",status:"Reçu",date:"17/09/2026",page:"eutelsat-16a-16d.html",note:"Comparatif terrain : 12 TP avec 1 m, 13 TP avec 1,30 m."},
+  {name:"Eutelsat 36",pos:"36°E",dish:"85 cm",freq:"12418 H 27499",tp:"plusieurs TP",status:"Reçu",date:"13/08/2026",page:"eutelsat-36e.html",note:"Réception Ku Afrique confirmée avec 85 cm."},
+  {name:"Intelsat 20",pos:"68,5°E",dish:"85 cm",freq:"12522 V 27500",tp:"13 TP observés",status:"Reçu",date:"17/09/2026",page:"intelsat-20.html",note:"Plusieurs multiplex TV/radio et feeds observés."}
+];
+
+const DISH_COMPARISON = [
+  {sat:"RASCOM-QAF1R 2,9°E",d85:"Stable",d100:"Non testé",d120:"Non testé",d130:"Non testé",note:"11231 H 40000 reçu avec 85 cm ; réception remarquable hors usage grand public classique."},
+  {sat:"SES-5 5°E",d85:"Reçu",d100:"Non testé",d120:"Stable",d130:"Non testé",note:"Plusieurs transpondeurs africains reçus."},
+  {sat:"Eutelsat 16°E",d85:"Non testé",d100:"Stable",d120:"Stable",d130:"Stable +",note:"12 TP avec 1 m contre 13 TP avec 1,30 m le 17/09/2026."},
+  {sat:"Eutelsat 36°E",d85:"Stable",d100:"Non testé",d120:"Stable",d130:"Non testé",note:"Plusieurs porteuses africaines reçues avec 85 cm."},
+  {sat:"Intelsat 20 68,5°E",d85:"Stable",d100:"Non testé",d120:"Stable",d130:"Non testé",note:"13 TP observés lors d'un blind scan 85 cm ; plusieurs services reçus."},
+  {sat:"Eutelsat 7C 7°E",d85:"Non testé",d100:"Non testé",d120:"Reçu / variable",d130:"Non testé",note:"À revalider après les évolutions récentes à 7°E."}
+];
+
+const SCAN_HISTORY = [
+  {date:"17/09/2026",sat:"RASCOM-QAF1R 2,9°E",dish:"85 cm offset",receiver:"Octagon SF8008 Supreme / V5",result:"11231 H 40000 — 26 services",detail:"Le blind scan détecte la porteuse ; les services sont trouvés en scan manuel sur l'Octagon. V5 confirme le bouquet."},
+  {date:"17/09/2026",sat:"Eutelsat 16°E",dish:"1,30 m offset",receiver:"Octagon SF8008 Supreme",result:"13 transpondeurs",detail:"11024 H / 5555 apparaît en plus du relevé 1 m."},
+  {date:"17/09/2026",sat:"Eutelsat 16°E",dish:"1,00 m offset",receiver:"Octagon SF8008 Supreme",result:"12 transpondeurs",detail:"Blind scan de comparaison réalisé le même matin."},
+  {date:"15/09/2026",sat:"Eutelsat 16°E",dish:"1,30 m offset",receiver:"Octagon SF8008 Supreme",result:"10804 H ≈ 30000 — SNR 44 % / AGC 93 %",detail:"Mux africain avec de nombreux services TV/radio détectés."},
+  {date:"14/09/2026",sat:"Eutelsat 16°E",dish:"1,00 m offset",receiver:"Octagon SF8008 Supreme",result:"5 TP au premier relevé / 194 services avec cryptés",detail:"10846 H, 10887 H, 11513 H, 11554 H, 11637 H ; meilleur niveau 10887 H à 74 % SNR."},
+  {date:"17/09/2026",sat:"Intelsat 20 68,5°E",dish:"85 cm",receiver:"Octagon SF8008 Supreme",result:"13 transpondeurs annoncés au blind scan",detail:"Liste détaillée à compléter lors du prochain relevé photographié."}
+];
+
+const SEARCH_INDEX = [
+  ...CONFIRMED_SATELLITES.map(x=>({type:"Satellite",title:`${x.name} ${x.pos}`,meta:`${x.freq} · ${x.dish}`,text:`${x.note} ${x.status} ${x.date}`,url:x.page})),
+  ...SCAN_HISTORY.map(x=>({type:"Scan",title:`${x.sat} — ${x.date}`,meta:`${x.dish} · ${x.receiver}`,text:`${x.result} ${x.detail}`,url:"#historique-scans"})),
+  {type:"Chaîne",title:"RTNC 1",meta:"RASCOM-QAF1R — 11231 H 40000",text:"Service reçu lors du scan manuel de 26 services.",url:"rascom-qaf1r.html"},
+  {type:"Chaîne",title:"France 24",meta:"RASCOM-QAF1R / Eutelsat 16",text:"Service documenté sur plusieurs réceptions DXSat 974.",url:"#fta"},
+  {type:"Chaîne",title:"Afrique Media 1",meta:"RASCOM-QAF1R — 11231 H 40000",text:"Service reçu lors du relevé du 17/09/2026.",url:"rascom-qaf1r.html"},
+  {type:"Chaîne",title:"RealTime",meta:"RASCOM-QAF1R — 11231 H 40000",text:"Service reçu lors du relevé du 17/09/2026.",url:"rascom-qaf1r.html"},
+  {type:"Chaîne",title:"CRTV",meta:"Eutelsat 16°E — 10804/10805 H ≈ 30000",text:"Service détecté dans le mux africain reçu avec la 1,30 m.",url:"eutelsat-16a-16d.html"},
+  {type:"Fréquence",title:"11231 H 40000",meta:"RASCOM-QAF1R 2,9°E",text:"Réception confirmée à La Réunion avec 85 cm.",url:"rascom-qaf1r.html"},
+  {type:"Fréquence",title:"10887 H 30000",meta:"Eutelsat 16°E",text:"Porteuse forte utilisée dans les essais 1 m / 1,30 m.",url:"eutelsat-16a-16d.html"},
+  {type:"Fréquence",title:"12522 V 27500",meta:"Intelsat 20 68,5°E",text:"SNR 10,5 dB / AGC 68 % lors d'un relevé Octagon.",url:"intelsat-20.html"}
+];

@@ -12,7 +12,7 @@ body{margin:0;background:#07111f;color:#eef5ff;font-family:Arial,system-ui,sans-
 a{color:#74d8ff}.back{display:inline-block;margin-bottom:18px;text-decoration:none}.card{background:#0e2033;border:1px solid #203e5a;border-radius:16px;padding:20px;margin:18px 0}
 h1{font-size:clamp(2.2rem,6vw,4rem);margin:.15em 0}.muted{color:#a9b9cc;line-height:1.6}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.item{background:#0a1727;border:1px solid #1d3550;border-radius:12px;padding:14px}
 .btn{display:inline-block;text-decoration:none;border:1px solid #2d5677;color:#dff5ff;background:#0b1d2f;border-radius:10px;padding:10px 12px;font-weight:700}.btn.primary{background:#0f5e86}
-ul.services{columns:2;column-gap:32px;line-height:1.75}.note{border-left:4px solid #4cc9f0;padding-left:14px}
+ul.services{columns:2;column-gap:32px;line-height:1.75}.note{border-left:4px solid #4cc9f0;padding-left:14px}.logo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.logo-card{background:#081420;border:1px solid #1d3550;border-radius:14px;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,.15)}.logo-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#0d1b2a}.logo-card .meta{padding:14px}.logo-card h3{margin:.2em 0;font-size:1.05rem}.pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#10324b;border:1px solid #28597a;color:#dff5ff;font-size:.78rem;font-weight:700;margin:.15rem .2rem .15rem 0}.legend{font-size:.95rem;color:#bfd0de;line-height:1.55}.small{font-size:.92rem;color:#bdd1e2}.inline-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#091623;border:1px solid #20364c;border-radius:8px;padding:2px 7px}
 @media(max-width:700px){.grid{grid-template-columns:1fr}ul.services{columns:1}}
 </style>
 </head>
@@ -44,6 +44,21 @@ ul.services{columns:2;column-gap:32px;line-height:1.75}.note{border-left:4px sol
 <p class="muted"><strong>Particularité Octagon :</strong> la porteuse 11231 / 40000 est bien détectée en blind scan, mais la liste des chaînes n'est obtenue qu'en recherche manuelle. Le V5 permet également de confirmer la présence du bouquet.</p>
 </div>
 <div class="card">
+<h2>Chaînes mises en avant — galerie logo v29</h2>
+<p class="muted">Première intégration visuelle pour la page RASCOM. Les chaînes ci-dessous disposent désormais d’un <strong>visuel/logo</strong> dans le site. Pour <strong>RealTime TV</strong>, un logo temporaire propre est utilisé en attendant une vérification plus poussée d’un visuel officiel.</p>
+<div class="logo-grid">
+  <article class="logo-card"><img src="images/channels/rascom/rtnc1.png" alt="Logo RTNC 1"><div class="meta"><h3>RTNC 1</h3><div class="small">République démocratique du Congo</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
+  <article class="logo-card"><img src="images/channels/rascom/france24.png" alt="Logo France 24"><div class="meta"><h3>France 24</h3><div class="small">Chaîne d’information internationale</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
+  <article class="logo-card"><img src="images/channels/rascom/afriquemedia1.png" alt="Logo Afrique Media 1"><div class="meta"><h3>Afrique Media 1</h3><div class="small">Chaîne panafricaine</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
+  <article class="logo-card"><img src="images/channels/rascom/cam10.png" alt="Logo CAM10"><div class="meta"><h3>CAM10 Télévision</h3><div class="small">Cameroun</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
+  <article class="logo-card"><img src="images/channels/rascom/dashtv.png" alt="Logo Dash TV"><div class="meta"><h3>Dash TV</h3><div class="small">Cameroun</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
+  <article class="logo-card"><img src="images/channels/rascom/infotv.png" alt="Logo Info TV"><div class="meta"><h3>Info TV</h3><div class="small">Cameroun</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
+  <article class="logo-card"><img src="images/channels/rascom/neotempra-tv.png" alt="Logo Neotempra TV"><div class="meta"><h3>Neotempra TV / NTV</h3><div class="small">Cameroun</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
+  <article class="logo-card"><img src="images/channels/rascom/realtime.png" alt="Visuel temporaire RealTime TV"><div class="meta"><h3>RealTime TV</h3><div class="small">Visuel temporaire en attendant un logo officiel vérifié</div><div><span class="pill">11231 H / 40000</span><span class="pill">FTA · image OK</span></div></div></article>
+</div>
+<p class="legend"><strong>Organisation retenue pour DXSat974 :</strong> une première galerie de chaînes mises en avant avec visuels, puis la liste complète des services trouvés sur le transpondeur. Cette structure permet d’ajouter progressivement d’autres logos sans perdre la vision globale du multiplex.</p>
+</div>
+<div class="card">
 <h2>Ce que disent les sources publiques</h2>
 <p class="muted">RascomStar confirme une position orbitale à <strong>2,9°E</strong>, avec bandes C et deux faisceaux Ku <strong>North</strong> et <strong>South</strong>. Les listes publiques récentes donnent le multiplex Ku South autour de <strong>11230 V / 40000</strong> et recensent notamment RTNC, RTNC 3, RTVS 1, France 24 Français, Afrique Média, Face TV et RealTime TV. Le relevé terrain DXSat 974 montre actuellement davantage de services que ces listes publiques.</p>
 <p><a class="btn primary" href="https://rascomstar.com/" target="_blank" rel="noopener">Site officiel RascomStar ↗</a> <a class="btn" href="https://www.lyngsat.com/Rascom-QAF-1R.html" target="_blank" rel="noopener">Liste publique LyngSat ↗</a></p>
@@ -52,7 +67,7 @@ ul.services{columns:2;column-gap:32px;line-height:1.75}.note{border-left:4px sol
 <h2>Autre multiplex Ku à tester</h2>
 <p class="muted"><strong>11430 H / 18330 — DVB-S2 8PSK 3/4 — faisceau Ku North</strong>. Des services FTA y sont référencés publiquement, mais ce faisceau est probablement beaucoup moins favorable depuis La Réunion.</p>
 </div>
-<div class="card"><h2>Dernière mise à jour</h2><p class="muted">17 septembre 2026</p></div>
+<div class="card"><h2>Dernière mise à jour</h2><p class="muted">23 septembre 2026</p></div>
 </main>
 </body>
 </html>

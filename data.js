@@ -94,7 +94,6 @@ const NEWS = [
 
 
 const VHF_TESTS = [
- {date:"2026-09-23",from:"Station DXSat974 — La Réunion",to:"Rapports d’écoute recherchés",freq:"145.600 MHz",mode:"FM / message périodique",prop:"À déterminer",antenna:"Yagi VHF 17 éléments directive",power:"200 mW",report:"Expérience en cours",notes:"Balise expérimentale sur Pocket Quansheng UV-K1. Émission toutes les 2 minutes, message MOI – MOS – MOH. Fiche détaillée : vhf-balise-145600.html"},
  {date:"2026-08-11",from:"Bois d’Olives, Saint-Pierre",to:"Quartier Français, Sainte-Suzanne",freq:"145.500 MHz",mode:"FM",prop:"Réflexion relief",antenna:"Yagi 9 él. H",power:"50 W",report:"S2 → S4 côté correspondant",notes:"Liaison obtenue via réflexion vers le Piton des Neiges. Polarisation horizontale."},
  {date:"2026-08-18",from:"Bois d’Olives, Saint-Pierre",to:"Quartier Français, Sainte-Suzanne",freq:"145.510 MHz",mode:"FM",prop:"Réflexion relief",antenna:"Yagi 9 él. H",power:"50 W",report:"Bonne radio / signal variable",notes:"La Yagi 9 éléments s’est montrée plus efficace que la 17 éléments sur ce trajet."},
  {date:"2026-08-18",from:"Bois d’Olives, Saint-Pierre",to:"Quartier Français, Sainte-Suzanne",freq:"145.510 MHz",mode:"FM",prop:"Réflexion relief",antenna:"Yagi 17 él. H",power:"50 W",report:"Moins bon que 9 él.",notes:"Essai comparatif de directivité et largeur de faisceau sur trajet réfléchi."}
